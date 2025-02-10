@@ -1,13 +1,3 @@
-import { useEffect, useRef } from 'react';
-
-// Add type definitions for Google Maps
-declare global {
-  interface Window {
-    google: any;  // Using any since we don't have complete Google Maps types
-    initMap?: () => void;  // Make initMap optional with ?
-  }
-}
-
 export default function GoogleMap() {
   const address = "Stephansplatz 8, 1010 Wien";
   const encodedAddress = encodeURIComponent(address);
