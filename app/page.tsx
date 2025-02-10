@@ -100,17 +100,17 @@ export default function Home() {
         
         <div className="container-custom relative z-10">
           <div className="flex flex-col items-center max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-8">
+            <h1 className="text-3xl md:text-6xl font-bold text-white mb-4 md:mb-8">
               FLEXIBEL, FREI, PROFESSIONELL
             </h1>
-            <p className="text-xl md:text-3xl text-white font-light max-w-3xl mb-12">
+            <p className="text-base md:text-3xl text-white font-light max-w-3xl mb-8 md:mb-12 px-4 md:px-0">
               Entdecken Sie professionelle Reinigungsdienstleistungen mit höchsten Standards für Qualität, Hygiene und Diskretion.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <a href="#kontakt" className="btn-primary text-lg">
+            <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center w-full px-4 md:px-0">
+              <a href="#kontakt" className="btn-primary text-base md:text-lg">
                 Jetzt Kontakt aufnehmen
               </a>
-              <a href="#dienstleistungen" className="btn-secondary text-lg">
+              <a href="#dienstleistungen" className="btn-secondary text-base md:text-lg">
                 Unsere Leistungen
               </a>
             </div>
