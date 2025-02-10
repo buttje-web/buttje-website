@@ -67,7 +67,7 @@ export default function Home() {
             playsInline
             preload="auto"
             className="object-cover w-full h-full"
-            src="/assets/bg_vid.mp4"
+            src="/assets/bg_vid2.mov"
             poster="/assets/hero_bg.png"
             controls={false}
           />
@@ -124,22 +124,27 @@ export default function Home() {
               {
                 title: "Gewerbliche Reinigung",
                 description: "Maßgeschneiderte Lösungen für Büros, Kanzleien, Praxen und gehobene Geschäftsräume.",
-                image: "/assets/Bildschirmfoto 2025-02-04 um 09.55.06.png"
+                image: "/assets/cleaning_bg.png"
               },
               {
                 title: "Umzugs- & Endreinigung",
                 description: "Perfekte Sauberkeit für Mieter, Eigentümer und Immobilienverwaltungen.",
-                image: "/assets/Bildschirmfoto 2025-02-04 um 09.55.06.png"
+                image: "/assets/moving_bg.png"
               },
               {
                 title: "Handwerkliche Zusatzservices",
                 description: "Kleinreparaturen, Malerarbeiten, Bodenverlegung und Trockenbau.",
-                image: "/assets/Bildschirmfoto 2025-02-04 um 09.55.06.png"
+                image: "/assets/craftsman_bg.png"
               },
               {
                 title: "Facility Services",
                 description: "Hausmeisterdienste, Pflege von Außenanlagen und Sonderreinigungen.",
                 image: "/assets/Bildschirmfoto 2025-02-04 um 09.55.06.png"
+              },
+              {
+                title: "Verträge jederzeit kündbar",
+                description: "Keine Knebel-Verträge - sobald Sie unzufrieden mit unserer Leistung sind, können Sie den Vertrag sofort beenden.",
+                image: "/assets/contract_bg.png"
               }
             ].map((service, index) => (
               <article 
