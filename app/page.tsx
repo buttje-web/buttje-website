@@ -74,8 +74,29 @@ export default function Home() {
 
   return (
     <>
-      {/* Hero Section - Redesigned with Slideshow */}
+      {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-end justify-center pb-32" aria-label="Willkommen">
+        {/* Side Navigation Arrows */}
+        <button 
+          onClick={() => setCurrentImageIndex(prev => prev === 0 ? images.length - 1 : prev - 1)}
+          className="absolute left-4 top-1/2 -translate-y-1/2 z-20 p-2 text-white hover:bg-black/20 rounded-full transition-colors"
+          aria-label="Vorheriges Bild"
+        >
+          <svg viewBox="0 0 24 24" className="w-8 h-8" fill="none" stroke="currentColor" strokeWidth="2">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+        <button 
+          onClick={() => setCurrentImageIndex(prev => prev === images.length - 1 ? 0 : prev + 1)}
+          className="absolute right-4 top-1/2 -translate-y-1/2 z-20 p-2 text-white hover:bg-black/20 rounded-full transition-colors"
+          aria-label="Nächstes Bild"
+        >
+          <svg viewBox="0 0 24 24" className="w-8 h-8" fill="none" stroke="currentColor" strokeWidth="2">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+
+        {/* Main Slideshow */}
         <div className="absolute inset-0 w-full h-full">
           {images.map((image, index) => (
             <div
@@ -98,6 +119,7 @@ export default function Home() {
           ))}
         </div>
         
+        {/* Content */}
         <div className="container-custom relative z-10">
           <div className="flex flex-col items-center max-w-4xl mx-auto text-center">
             <h1 className="text-3xl md:text-6xl font-bold text-white mb-4 md:mb-8">
@@ -115,20 +137,6 @@ export default function Home() {
               </a>
             </div>
           </div>
-        </div>
-
-        {/* Navigation dots moved up slightly */}
-        <div className="absolute bottom-16 left-1/2 -translate-x-1/2 flex gap-2 z-20">
-          {images.map((_, index) => (
-            <button
-              key={index}
-              className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                currentImageIndex === index ? 'bg-white w-4' : 'bg-white/50'
-              }`}
-              onClick={() => setCurrentImageIndex(index)}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
         </div>
       </section>
 
