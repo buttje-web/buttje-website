@@ -13,6 +13,7 @@ const frutiger = localFont({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://buttje.at'),
   title: "buttje | Professionelle Reinigung & Möbelservice",
   description: "Hochwertige Reinigungsdienstleistungen und Möbelservice mit höchsten Standards für Qualität, Hygiene und Diskretion. Ein Lappen pro Tisch - für maximale Sauberkeit.",
   keywords: "Reinigungsservice, Möbelservice, Hygiene, Diskretion, Qualitätsreinigung, Möbelpflege, Wien, Professionelle Reinigung, Stephansplatz",

@@ -45,11 +45,11 @@ html {
   }
   
   .btn-primary {
-    @apply bg-[var(--primary)] text-white font-semibold py-3 px-8 rounded-lg hover:bg-[var(--primary-dark)] transition-all duration-300 hover:scale-105;
+    @apply bg-[var(--primary)] text-white font-semibold py-4 px-8 rounded hover:bg-[var(--primary-dark)] transition-all duration-300 min-w-[200px] text-center;
   }
   
   .btn-secondary {
-    @apply bg-white text-[var(--primary)] font-semibold py-3 px-8 rounded-lg border border-[var(--primary)] hover:bg-gray-50 transition-all duration-300 hover:scale-105;
+    @apply bg-transparent text-white font-semibold py-4 px-8 rounded border-2 border-white hover:bg-white hover:text-[var(--primary)] transition-all duration-300 min-w-[200px] text-center;
   }
 }
 
@@ -116,4 +116,22 @@ section {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary-dark);
+}
+
+/* New section styles */
+.section-title {
+  @apply text-4xl font-bold mb-6 text-gray-900;
+}
+
+.section-subtitle {
+  @apply text-xl text-[var(--primary)] font-medium;
+}
+
+/* Card hover effects */
+.service-card {
+  @apply transition-all duration-300;
+}
+
+.service-card:hover {
+  @apply shadow-xl -translate-y-1;
 }
