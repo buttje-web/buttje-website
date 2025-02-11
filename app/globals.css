@@ -44,6 +44,11 @@ html {
     min-width: 0;
   }
   
+  .container-custom-transparent {
+    @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-transparent;
+    min-width: 0;
+  }
+  
   .btn-primary {
     @apply bg-[var(--primary)] text-white font-semibold py-3 px-8 rounded-lg hover:bg-[var(--primary-dark)] transition-all duration-300 hover:scale-105;
   }

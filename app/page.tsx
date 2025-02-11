@@ -1,8 +1,17 @@
 'use client';
 
+import React from 'react';
 import GoogleMap from "./components/GoogleMap";
 import { useEffect, useRef } from "react";
 import Image from 'next/image';
+
+// Add this type before the services array
+type Service = {
+  title: string;
+  description: string;
+  image: string;
+  customContent?: (service: Service) => React.ReactElement;
+};
 
 export default function Home() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -119,46 +128,59 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12" role="list">
-            {[
+          <div 
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 max-w-[1200px] mx-auto" 
+            role="list"
+          >
+            {([
               {
                 title: "Gewerbliche Reinigung",
                 description: "Maßgeschneiderte Lösungen für Büros, Kanzleien, Praxen und gehobene Geschäftsräume.",
-                image: "/assets/Bildschirmfoto 2025-02-04 um 09.55.06.png"
+                image: "/assets/cleaning_bg.png"
               },
               {
                 title: "Umzugs- & Endreinigung",
                 description: "Perfekte Sauberkeit für Mieter, Eigentümer und Immobilienverwaltungen.",
-                image: "/assets/Bildschirmfoto 2025-02-04 um 09.55.06.png"
+                image: "/assets/moving_bg.png"
               },
               {
                 title: "Handwerkliche Zusatzservices",
                 description: "Kleinreparaturen, Malerarbeiten, Bodenverlegung und Trockenbau.",
-                image: "/assets/Bildschirmfoto 2025-02-04 um 09.55.06.png"
+                image: "/assets/craftsman_bg.png"
               },
               {
                 title: "Facility Services",
                 description: "Hausmeisterdienste, Pflege von Außenanlagen und Sonderreinigungen.",
                 image: "/assets/Bildschirmfoto 2025-02-04 um 09.55.06.png"
-              }
-            ].map((service, index) => (
+              },
+            ] as Service[]).map((service, index) => (
               <article 
                 key={index}
-                className="group relative overflow-hidden rounded-xl shadow-lg transition-all duration-300 hover:-translate-y-2"
+                className="group relative overflow-hidden rounded-xl shadow-lg transition-all duration-300 hover:-translate-y-2 w-full"
                 role="listitem"
               >
                 <div className="relative w-full h-[300px]">
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    fill
-                    className="object-cover rounded-lg"
-                    priority
-                  />
-                </div>
-                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                  <h3 className="text-2xl font-bold mb-3">{service.title}</h3>
-                  <p className="text-gray-200">{service.description}</p>
+                  {service.customContent ? (
+                    typeof service.customContent === 'function' 
+                      ? service.customContent(service)
+                      : service.customContent
+                  ) : (
+                    <>
+                      <Image
+                        src={service.image}
+                        alt={service.title}
+                        fill
+                        className="object-cover rounded-lg"
+                        priority
+                      />
+                      {/* Dark overlay gradient */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/10 rounded-lg" />
+                      <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <h3 className="text-2xl font-bold mb-3">{service.title}</h3>
+                        <p className="text-gray-200">{service.description}</p>
+                      </div>
+                    </>
+                  )}
                 </div>
               </article>
             ))}
@@ -167,20 +189,17 @@ export default function Home() {
       </section>
 
       {/* About Us Preview Section */}
-      <section className="py-20 bg-gray-50" aria-label="Über uns">
-        <div className="container-custom">
+      <section className="py-20" aria-label="Über uns">
+        <div className="container-custom-transparent">
           <div className="max-w-4xl mx-auto">
-            <article className="bg-white rounded-xl shadow-lg overflow-hidden">
+            <article className="bg-white/90 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden">
               <div className="p-8 md:p-12">
                 <h2 className="text-3xl font-bold mb-6 text-gray-900">
                   buttje ist mehr als ein Name
                 </h2>
                 <div className="prose prose-lg text-gray-800">
-                  <p className="lead text-xl mb-6">
-                    Es gibt zwei Arten, einen Job zu machen: Irgendwie – oder richtig. buttje steht für die zweite Variante.
-                  </p>
                   <p className="mb-8">
-                    In Hamburg haben wir gelernt, dass echte Perfektion nicht laut sein muss. Sie zeigt sich in den kleinen Dingen – in der Sorgfalt, in der Beständigkeit, in dem Wissen, dass ein Job erst dann fertig ist, wenn er es verdient hat, als &quot;fertig&quot; bezeichnet zu werden.
+                    In Hamburg haben wir gelernt, dass echte Perfektion nicht laut sein muss. Sie zeigt sich in der Sorgfalt, in der Beständigkeit, in dem Wissen, dass ein Job erst dann fertig ist, wenn er es verdient hat, als &quot;fertig&quot; bezeichnet zu werden.
                   </p>
                   <div className="flex justify-center">
                     <a
@@ -198,6 +217,13 @@ export default function Home() {
             </article>
           </div>
         </div>
+      </section>
+
+      {/* Contract Image Divider Section */}
+      <section 
+        className="relative h-[400px] w-full bg-fixed bg-center bg-cover bg-no-repeat"
+        style={{ backgroundImage: 'url("/assets/contract_bg.png")' }}
+      >
       </section>
 
       {/* USP Section */}
@@ -226,6 +252,10 @@ export default function Home() {
               {
                 title: "Exklusive Optik",
                 description: "Unser Team tritt auf wie in einem Fünf-Sterne-Hotel: sauber, einheitlich und professionell."
+              },
+              {
+                title: "Flexible Verträge",
+                description: "Keine Knebelverträge - wenn Sie mit unserer Leistung unzufrieden sind, können Sie sofort kündigen."
               }
             ].map((usp, index) => (
               <article
