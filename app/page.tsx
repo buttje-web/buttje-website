@@ -217,7 +217,7 @@ export default function Home() {
         className="relative h-[500px] w-full bg-fixed bg-center bg-cover bg-no-repeat"
         style={{ 
           backgroundImage: 'url("/assets/contract_bg.png")',
-          backgroundPosition: 'center 30%'
+          backgroundPosition: 'center 30%',
         }}
       />
 
