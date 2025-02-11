@@ -214,10 +214,11 @@ export default function Home() {
 
       {/* Contract Image Divider Section */}
       <section 
-        className="relative h-[500px] w-full bg-fixed bg-center bg-cover bg-no-repeat"
+        className="relative h-[500px] w-full bg-center bg-no-repeat md:bg-fixed md:bg-cover"
         style={{ 
           backgroundImage: 'url("/assets/contract_bg.png")',
           backgroundPosition: 'center 30%',
+          backgroundSize: 'cover'
         }}
       />
 
