@@ -1,8 +1,8 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import GoogleMap from "./components/GoogleMap";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import Image from 'next/image';
 
 // Add this type before the services array
@@ -15,6 +15,30 @@ type Service = {
 
 export default function Home() {
   const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+            observer.unobserve(entry.target); // Stop observing once animated
+          }
+        });
+      },
+      {
+        threshold: 0.1, // Start animation when 10% of the element is visible
+        rootMargin: '50px' // Start animation slightly before the element comes into view
+      }
+    );
+
+    // Observe all elements with slide-in classes
+    document.querySelectorAll('.slide-in-left, .slide-in-right').forEach((el) => {
+      observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   const playVideo = async () => {
     const video = videoRef.current;
@@ -156,7 +180,7 @@ export default function Home() {
             ] as Service[]).map((service, index) => (
               <article 
                 key={index}
-                className="group relative overflow-hidden rounded-xl shadow-lg transition-all duration-300 hover:-translate-y-2 w-full"
+                className={`group relative overflow-hidden rounded-xl shadow-lg transition-all duration-300 hover:-translate-y-2 w-full ${index % 2 === 0 ? 'slide-in-left' : 'slide-in-right'} animate-delay-${index + 1}`}
                 role="listitem"
               >
                 <div className="relative w-full h-[300px]">
@@ -231,7 +255,7 @@ export default function Home() {
             ].map((usp, index) => (
               <article
                 key={index}
-                className="p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow"
+                className={`p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow ${index % 2 === 0 ? 'slide-in-left' : 'slide-in-right'} animate-delay-${index + 1}`}
                 role="listitem"
               >
                 <h3 className="text-xl font-semibold mb-3 text-[var(--primary)]">
@@ -250,7 +274,7 @@ export default function Home() {
       <section className="pt-0 pb-20 bg-white" aria-label="Über uns">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
-            <article className="bg-white backdrop-blur-sm rounded-xl shadow-lg overflow-hidden">
+            <article className="bg-white backdrop-blur-sm rounded-xl shadow-lg overflow-hidden slide-in-right animate-delay-1">
               <div className="p-8 md:p-12">
                 <h2 className="text-3xl font-bold mb-6 text-gray-900">
                   buttje ist mehr als ein Name
@@ -283,7 +307,7 @@ export default function Home() {
           <h2 className="text-3xl font-bold text-center mb-16 text-gray-900" id="referenzen">
             Diskretion – Vertrauen durch Verschwiegenheit
           </h2>
-          <article className="flex flex-col items-center text-center p-8 rounded-xl border border-gray-100 shadow-sm max-w-3xl mx-auto space-y-8">
+          <article className="flex flex-col items-center text-center p-8 rounded-xl border border-gray-100 shadow-sm max-w-3xl mx-auto space-y-8 slide-in-left animate-delay-1">
             <p className="text-xl text-gray-800">
               Diskretion ist keine Option – sie ist unser Standard. buttje steht für absolute Vertraulichkeit und schützt die Privatsphäre seiner Kunden konsequent.
             </p>
@@ -326,7 +350,7 @@ export default function Home() {
           </div>
 
           <div className="max-w-4xl mx-auto">
-            <article className="bg-white rounded-xl shadow-lg overflow-hidden">
+            <article className="bg-white rounded-xl shadow-lg overflow-hidden slide-in-right animate-delay-1">
               <div className="aspect-[16/9] relative">
                 <Image
                   src="/assets/Bildschirmfoto 2025-02-04 um 09.55.06.png"
