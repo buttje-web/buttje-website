@@ -188,8 +188,18 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Contract Image Divider Section */}
+      <section 
+        className="relative h-[800px] w-full bg-fixed bg-center bg-cover bg-no-repeat -mb-80"
+        style={{ 
+          backgroundImage: 'url("/assets/contract_bg.png")',
+          backgroundPosition: 'center 30%'
+        }}
+      >
+      </section>
+
       {/* About Us Preview Section */}
-      <section className="py-20" aria-label="Über uns">
+      <section className="relative -mt-0 py-20 z-100" aria-label="Über uns">
         <div className="container-custom-transparent">
           <div className="max-w-4xl mx-auto">
             <article className="bg-white/90 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden">
@@ -217,13 +227,6 @@ export default function Home() {
             </article>
           </div>
         </div>
-      </section>
-
-      {/* Contract Image Divider Section */}
-      <section 
-        className="relative h-[400px] w-full bg-fixed bg-center bg-cover bg-no-repeat"
-        style={{ backgroundImage: 'url("/assets/contract_bg.png")' }}
-      >
       </section>
 
       {/* USP Section */}
