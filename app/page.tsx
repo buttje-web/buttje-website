@@ -190,44 +190,12 @@ export default function Home() {
 
       {/* Contract Image Divider Section */}
       <section 
-        className="relative h-[800px] w-full bg-fixed bg-center bg-cover bg-no-repeat -mb-80"
+        className="relative h-[500px] w-full bg-fixed bg-center bg-cover bg-no-repeat"
         style={{ 
           backgroundImage: 'url("/assets/contract_bg.png")',
           backgroundPosition: 'center 30%'
         }}
-      >
-      </section>
-
-      {/* About Us Preview Section */}
-      <section className="relative -mt-0 py-20 z-100" aria-label="Über uns">
-        <div className="container-custom-transparent">
-          <div className="max-w-4xl mx-auto">
-            <article className="bg-white/90 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden">
-              <div className="p-8 md:p-12">
-                <h2 className="text-3xl font-bold mb-6 text-gray-900">
-                  buttje ist mehr als ein Name
-                </h2>
-                <div className="prose prose-lg text-gray-800">
-                  <p className="mb-8">
-                    In Hamburg haben wir gelernt, dass echte Perfektion nicht laut sein muss. Sie zeigt sich in der Sorgfalt, in der Beständigkeit, in dem Wissen, dass ein Job erst dann fertig ist, wenn er es verdient hat, als &quot;fertig&quot; bezeichnet zu werden.
-                  </p>
-                  <div className="flex justify-center">
-                    <a
-                      href="/ueber-uns"
-                      className="inline-flex items-center gap-2 text-[var(--primary)] font-semibold hover:text-[var(--primary-dark)] transition-colors"
-                    >
-                      Mehr über uns erfahren
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
+      />
 
       {/* USP Section */}
       <section className="py-20 bg-white" aria-label="Vorteile">
@@ -238,7 +206,7 @@ export default function Home() {
           <p className="text-2xl text-center mb-16 text-[var(--primary)]">
             &ldquo;So muk wi dat – weil wir&apos;s besser können.&rdquo;
           </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8" role="list">
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16" role="list">
             {[
               {
                 title: "Perfektion bis ins Detail",
@@ -275,9 +243,37 @@ export default function Home() {
               </article>
             ))}
           </div>
-          <p className="text-xl font-semibold text-center mt-20 text-[var(--primary)]">
-            Wir akzeptieren keinen Durchschnitt – nur Exzellenz.
-          </p>
+        </div>
+      </section>
+
+      {/* About Us Section */}
+      <section className="pt-0 pb-20 bg-white" aria-label="Über uns">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto">
+            <article className="bg-white backdrop-blur-sm rounded-xl shadow-lg overflow-hidden">
+              <div className="p-8 md:p-12">
+                <h2 className="text-3xl font-bold mb-6 text-gray-900">
+                  buttje ist mehr als ein Name
+                </h2>
+                <div className="prose prose-lg text-gray-800">
+                  <p className="mb-8">
+                    In Hamburg haben wir gelernt, dass echte Perfektion nicht laut sein muss. Sie zeigt sich in der Sorgfalt, in der Beständigkeit, in dem Wissen, dass ein Job erst dann fertig ist, wenn er es verdient hat, als &quot;fertig&quot; bezeichnet zu werden.
+                  </p>
+                  <div className="flex justify-center">
+                    <a
+                      href="/ueber-uns"
+                      className="inline-flex items-center gap-2 text-[var(--primary)] font-semibold hover:text-[var(--primary-dark)] transition-colors"
+                    >
+                      Mehr über uns erfahren
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
 
