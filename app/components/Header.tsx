@@ -25,16 +25,16 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex gap-8">
-            <Link href="#dienstleistungen" className="text-gray-900 hover:text-[var(--primary)]">
+            <Link href="/#dienstleistungen" className="text-gray-900 hover:text-[var(--primary)]">
               Dienstleistungen
             </Link>
-            <Link href="#referenzen" className="text-gray-900 hover:text-[var(--primary)]">
+            <Link href="/#referenzen" className="text-gray-900 hover:text-[var(--primary)]">
               Referenzen
             </Link>
-            <Link href="#vorteile" className="text-gray-900 hover:text-[var(--primary)]">
+            <Link href="/#vorteile" className="text-gray-900 hover:text-[var(--primary)]">
               Vorteile
             </Link>
-            <Link href="#kontakt" className="text-gray-900 hover:text-[var(--primary)]">
+            <Link href="/#kontakt" className="text-gray-900 hover:text-[var(--primary)]">
               Kontakt
             </Link>
           </div>
@@ -66,28 +66,28 @@ export default function Header() {
           <div className="md:hidden py-4">
             <div className="flex flex-col gap-4">
               <Link
-                href="#dienstleistungen"
+                href="/#dienstleistungen"
                 className="text-gray-900 hover:text-[var(--primary)]"
                 onClick={() => setIsOpen(false)}
               >
                 Dienstleistungen
               </Link>
               <Link
-                href="#referenzen"
+                href="/#referenzen"
                 className="text-gray-900 hover:text-[var(--primary)]"
                 onClick={() => setIsOpen(false)}
               >
                 Referenzen
               </Link>
               <Link
-                href="#vorteile"
+                href="/#vorteile"
                 className="text-gray-900 hover:text-[var(--primary)]"
                 onClick={() => setIsOpen(false)}
               >
                 Vorteile
               </Link>
               <Link
-                href="#kontakt"
+                href="/#kontakt"
                 className="text-gray-900 hover:text-[var(--primary)]"
                 onClick={() => setIsOpen(false)}
               >
