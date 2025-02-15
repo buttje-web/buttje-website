@@ -101,7 +101,7 @@ export default function Home() {
             preload="auto"
             className="object-cover w-full h-full"
             src="/assets/bg_vid.mp4"
-            poster="/assets/hero_bg.png"
+            poster="/assets/hero.webp"
             controls={false}
           />
         </div>
