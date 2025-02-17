@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import GoogleMap from "./components/GoogleMap";
 import { useRef } from "react";
 import Image from 'next/image';
+import Link from 'next/link';
 
 // Add this type before the services array
 type Service = {
@@ -11,6 +12,7 @@ type Service = {
   description: string;
   image: string;
   customContent?: (service: Service) => React.ReactElement;
+  link: string;
 };
 
 export default function Home() {
@@ -160,53 +162,60 @@ export default function Home() {
               {
                 title: "Gewerbliche Reinigung",
                 description: "Maßgeschneiderte Lösungen für Büros, Kanzleien, Praxen und gehobene Geschäftsräume.",
-                image: "/assets/cleaning_bg.png"
+                image: "/assets/cleaning_bg.png",
+                link: "/dienstleistungen/gewerbliche-reinigung"
               },
               {
                 title: "Umzugs- & Endreinigung",
                 description: "Perfekte Sauberkeit für Mieter, Eigentümer und Immobilienverwaltungen.",
-                image: "/assets/moving_bg.png"
+                image: "/assets/moving_bg.png",
+                link: "/dienstleistungen/umzugs-und-endreinigung"
               },
               {
                 title: "Handwerkliche Zusatzservices",
                 description: "Kleinreparaturen, Malerarbeiten, Bodenverlegung und Trockenbau.",
-                image: "/assets/craftsman_bg.png"
+                image: "/assets/craftsman_bg.png",
+                link: "/dienstleistungen/handwerkliche-zusatzservices"
               },
               {
                 title: "Facility Services",
                 description: "Hausmeisterdienste, Pflege von Außenanlagen und Sonderreinigungen.",
-                image: "/assets/facility_service.webp"
-              },
+                image: "/assets/facility_service.webp",
+                link: "/dienstleistungen/facility-services"
+              }
             ] as Service[]).map((service, index) => (
-              <article 
+              <Link 
                 key={index}
-                className={`group relative overflow-hidden rounded-xl shadow-lg transition-all duration-300 hover:-translate-y-2 w-full ${index % 2 === 0 ? 'slide-in-left' : 'slide-in-right'} animate-delay-${index + 1}`}
+                href={service.link}
+                className={`group relative overflow-hidden rounded-xl shadow-lg transition-all duration-300 hover:-translate-y-2 w-full ${index % 2 === 0 ? 'slide-in-left' : 'slide-in-right'} animate-delay-${index + 1} cursor-pointer`}
                 role="listitem"
               >
-                <div className="relative w-full h-[300px]">
-                  {service.customContent ? (
-                    typeof service.customContent === 'function' 
-                      ? service.customContent(service)
-                      : service.customContent
-                  ) : (
-                    <>
-                      <Image
-                        src={service.image}
-                        alt={service.title}
-                        fill
-                        className="object-cover rounded-lg"
-                        priority
-                      />
-                      {/* Dark overlay gradient */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/10 rounded-lg" />
-                      <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                        <h3 className="text-2xl font-bold mb-3">{service.title}</h3>
-                        <p className="text-gray-200">{service.description}</p>
-                      </div>
-                    </>
-                  )}
-                </div>
-              </article>
+                <article>
+                  <div className="relative w-full h-[300px]">
+                    {service.customContent ? (
+                      typeof service.customContent === 'function' 
+                        ? service.customContent(service)
+                        : service.customContent
+                    ) : (
+                      <>
+                        <Image
+                          src={service.image}
+                          alt={service.title}
+                          fill
+                          className="object-cover rounded-lg"
+                          priority
+                        />
+                        {/* Dark overlay gradient */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/10 rounded-lg" />
+                        <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                          <h3 className="text-2xl font-bold mb-3">{service.title}</h3>
+                          <p className="text-gray-200">{service.description}</p>
+                        </div>
+                      </>
+                    )}
+                  </div>
+                </article>
+              </Link>
             ))}
           </div>
         </div>
