@@ -175,7 +175,7 @@ export default function Home() {
               {
                 title: "Facility Services",
                 description: "Hausmeisterdienste, Pflege von Außenanlagen und Sonderreinigungen.",
-                image: "/assets/Bildschirmfoto 2025-02-04 um 09.55.06.png"
+                image: "/assets/facility_service.webp"
               },
             ] as Service[]).map((service, index) => (
               <article 
