@@ -21,8 +21,8 @@ export default function Footer() {
               </p>
               <p>
                 <span className="text-[var(--primary)]">Telefon:</span>{" "}
-                <a href="tel:+436811011310" className="text-[var(--primary)] hover:text-[var(--primary-dark)]">
-                  +43 681 10113106
+                <a href="tel:+4312366326442" className="text-[var(--primary)] hover:text-[var(--primary-dark)]">
+                  +43 123 66326442
                 </a>
               </p>
               <p>

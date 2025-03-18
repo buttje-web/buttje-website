@@ -108,7 +108,7 @@ export default function FacilityServices() {
           <div className="text-center">
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+436811011310"
+                href="tel:+4312366326442"
                 className="btn-primary"
               >
                 Jetzt Beratung anfordern

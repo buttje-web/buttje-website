@@ -16,7 +16,7 @@ export default function ImpressumPage() {
             
             <p className="mt-4">
               <strong>Kontakt:</strong><br />
-              Telefon: +43 681 10113106<br />
+              Telefon: +43 1 236 632 6 442<br />
               E-Mail: info@buttje.at
             </p>
 
@@ -26,8 +26,13 @@ export default function ImpressumPage() {
             </p>
 
             <p className="mt-4">
+              <strong>Firmenbuchnummer:</strong><br />
+              FN 648848 p
+            </p>
+
+            <p className="mt-4">
               <strong>UID-Nummer:</strong><br />
-              [Ihre UID-Nummer]
+              ATU81765216
             </p>
 
             <p className="mt-4">

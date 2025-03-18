@@ -2,7 +2,7 @@ export default function FloatingContact() {
   return (
     <div style={{ position: 'fixed', bottom: '1rem', right: '1rem' }} className="flex flex-col gap-2 z-50">
       <a
-        href="tel:+436811011310"
+        href="tel:+4312366326442"
         className="bg-white text-[var(--primary)] p-3 rounded-full shadow-lg hover:shadow-xl transition-all"
         aria-label="Jetzt anrufen"
       >

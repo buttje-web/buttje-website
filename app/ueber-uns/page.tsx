@@ -75,8 +75,8 @@ export default function UeberUnsPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+436811011310"
-                className="btn-primary flex items-center justify-center gap-2"
+                href="tel:+4312366326442"
+                className="inline-block bg-white text-[var(--primary)] font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors flex items-center justify-center gap-2"
               >
                 <svg 
                   viewBox="0 0 24 24" 
