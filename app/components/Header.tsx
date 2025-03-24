@@ -31,9 +31,7 @@ export default function Header() {
             <Link href="/#referenzen" className="text-gray-900 hover:text-[var(--primary)]">
               Referenzen
             </Link>
-            <Link href="/#vorteile" className="text-gray-900 hover:text-[var(--primary)]">
-              Vorteile
-            </Link>
+           
             <Link href="/#kontakt" className="text-gray-900 hover:text-[var(--primary)]">
               Kontakt
             </Link>

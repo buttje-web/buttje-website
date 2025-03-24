@@ -102,7 +102,7 @@ export default function Home() {
             playsInline
             preload="auto"
             className="object-cover w-full h-full"
-            src="/assets/output.webm"
+            src="/assets/5sec_uncompressed.mp4"
             poster="/assets/hero_background.jpg"
             controls={false}
           />
