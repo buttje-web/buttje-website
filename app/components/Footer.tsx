@@ -66,7 +66,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t text-center text-sm text-gray-500">
-          © {new Date().getFullYear()} buttje Reinigung. Alle Rechte vorbehalten.
+          © {new Date().getFullYear()} buttje e.U. Alle Rechte vorbehalten.
         </div>
       </div>
     </footer>
