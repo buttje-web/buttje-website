@@ -361,22 +361,37 @@ export default function Home() {
 
           <div className="max-w-4xl mx-auto">
             <article className="bg-white rounded-xl shadow-lg overflow-hidden slide-in-right animate-delay-1">
-              <div className="aspect-[16/9] relative">
-                <Image
-                  src="/assets/news_compressed.jpg"
-                  alt="Spezialreinigungen"
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+              <div className="aspect-[16/9] relative flex items-center justify-center bg-white">
+                <div className="flex flex-col items-center justify-center gap-0">
+                  <div className="flex items-center justify-center gap-0 scale-[0.65] sm:scale-75 md:scale-100">
+                    <svg 
+                      width="240" 
+                      height="240" 
+                      viewBox="0 0 20 30" 
+                      fill="none" 
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="text-[var(--primary)]"
+                    >
+                      <rect x="1" y="1" width="12" height="12" rx="0" stroke="currentColor" strokeWidth="0.7"/>
+                      <rect x="15" y="5" width="8" height="8" rx="1" stroke="currentColor" strokeWidth="0.7"/>
+                      <rect x="5" y="15" width="8" height="8" rx="1" stroke="currentColor" strokeWidth="0.7"/> 
+                      <circle cx="17" cy="17" r="2" stroke="currentColor" strokeWidth="0.7"/>
+                    </svg>
+                    <span className="text-[4.5rem] font-bold text-gray-900 translate-y-16">buttje</span>
+                  </div>
+                  <div className="mt-4 w-full max-w-2xl mx-auto">
+                    <div className="max-w-[280px] sm:max-w-lg md:max-w-2xl mx-auto">
+                      
+                      <p className="text-lg sm:text-xl md:text-3xl font-light text-gray-900">
+                        Bald bei uns: Professionelle <span className="font-bold">Tatortreinigung</span>.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div className="p-8">
-                <h3 className="text-3xl font-bold mb-4 text-gray-900">Neu: Spezialreinigungen</h3>
-                <p className="text-xl text-gray-700 mb-6">
-                  Tatortreinigung, Desinfektionsreinigung, Brandschaden- und Wasserschadensanierung – Professionelle Lösungen für besondere Anforderungen.
-                </p>
                 <div className="flex items-center text-[var(--primary)]">
-                  <span className="text-lg font-semibold">Bald verfügbar</span>
+                  <span className="text-lg font-semibold">Jetzt anfragen</span>
                   <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
