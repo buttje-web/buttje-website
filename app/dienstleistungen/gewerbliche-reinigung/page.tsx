@@ -108,7 +108,7 @@ export default function GewerblicheReinigung() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+4312366326442"
-                className="inline-block bg-white text-[var(--primary)] font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors flex items-center justify-center gap-2"
+                className="btn-primary"
               >
                 Jetzt Termin vereinbaren
               </a>
