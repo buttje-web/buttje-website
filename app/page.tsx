@@ -103,7 +103,7 @@ export default function Home() {
             preload="auto"
             className="object-cover w-full h-full"
             src="/assets/output.webm"
-            poster="/assets/hero.webp"
+            poster="/assets/hero_background.jpg"
             controls={false}
           />
         </div>
