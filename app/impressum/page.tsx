@@ -9,6 +9,7 @@ export default function ImpressumPage() {
             <h2>Angaben gemäß § 5 ECG</h2>
             <p>
               buttje e.U.<br />
+              Rami Ibrami<br />
               Graben 28/1/12<br />
               1010 Wien<br />
               Österreich
