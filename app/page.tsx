@@ -383,7 +383,7 @@ export default function Home() {
                     <div className="max-w-[280px] sm:max-w-lg md:max-w-2xl mx-auto">
                       
                       <p className="text-lg sm:text-xl md:text-3xl font-light text-gray-900">
-                        Bald bei uns: Professionelle <span className="font-bold">Tatortreinigung</span>.
+                        Bald bei uns: <span className="font-bold">Tatortreinigung</span>.
                       </p>
                     </div>
                   </div>
