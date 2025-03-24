@@ -162,25 +162,25 @@ export default function Home() {
               {
                 title: "Gewerbliche Reinigung",
                 description: "Maßgeschneiderte Lösungen für Büros, Kanzleien, Praxen und gehobene Geschäftsräume.",
-                image: "/assets/cleaning_bg.png",
+                image: "/assets/mob_compressed.jpg",
                 link: "/dienstleistungen/gewerbliche-reinigung"
               },
               {
                 title: "Umzugs- & Endreinigung",
                 description: "Perfekte Sauberkeit für Mieter, Eigentümer und Immobilienverwaltungen.",
-                image: "/assets/moving_bg.png",
+                image: "/assets/moving_compressed.jpg",
                 link: "/dienstleistungen/umzugs-und-endreinigung"
               },
               {
                 title: "Handwerkliche Zusatzservices",
                 description: "Kleinreparaturen, Malerarbeiten, Bodenverlegung und Trockenbau.",
-                image: "/assets/craftsman_bg.png",
+                image: "/assets/roller_compressed.jpg",
                 link: "/dienstleistungen/handwerkliche-zusatzservices"
               },
               {
                 title: "Facility Services",
                 description: "Hausmeisterdienste, Pflege von Außenanlagen und Sonderreinigungen.",
-                image: "/assets/facility_service.webp",
+                image: "/assets/team_compressed.jpg",
                 link: "/dienstleistungen/facility-services"
               }
             ] as Service[]).map((service, index) => (
@@ -225,7 +225,7 @@ export default function Home() {
       <section 
         className="relative h-[500px] w-full bg-center bg-no-repeat md:bg-fixed md:bg-cover"
         style={{ 
-          backgroundImage: 'url("/assets/contract_bg.png")',
+          backgroundImage: 'url("/assets/contract_compressed.jpg")',
           backgroundPosition: 'center 30%',
           backgroundSize: 'cover'
         }}
@@ -363,7 +363,7 @@ export default function Home() {
             <article className="bg-white rounded-xl shadow-lg overflow-hidden slide-in-right animate-delay-1">
               <div className="aspect-[16/9] relative">
                 <Image
-                  src="/assets/Bildschirmfoto 2025-02-04 um 09.55.06.png"
+                  src="/assets/news_compressed.jpg"
                   alt="Spezialreinigungen"
                   fill
                   className="object-cover"

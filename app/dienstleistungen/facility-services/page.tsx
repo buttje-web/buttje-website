@@ -33,7 +33,7 @@ export default function FacilityServices() {
       {/* Hero Section */}
       <div className="h-[60vh] min-h-[500px] relative">
         <Image
-          src="/assets/facility_service.webp"
+          src="/assets/team_compressed.jpg"
           alt="Facility Services"
           fill
           className="object-cover"

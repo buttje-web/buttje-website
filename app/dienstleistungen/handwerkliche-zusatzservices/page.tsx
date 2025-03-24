@@ -33,7 +33,7 @@ export default function HandwerklicheZusatzservices() {
       {/* Hero Section */}
       <div className="h-[60vh] min-h-[500px] relative">
         <Image
-          src="/assets/craftsman_bg.png"
+          src="/assets/roller_compressed.jpg"
           alt="Handwerkliche Zusatzservices"
           fill
           className="object-cover"

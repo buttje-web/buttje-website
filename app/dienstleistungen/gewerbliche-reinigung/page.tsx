@@ -33,7 +33,7 @@ export default function GewerblicheReinigung() {
       {/* Hero Section */}
       <div className="h-[60vh] min-h-[500px] relative">
         <Image
-          src="/assets/cleaning_bg.png"
+          src="/assets/mob_compressed.jpg"
           alt="Gewerbliche Reinigung"
           fill
           className="object-cover"

@@ -33,7 +33,7 @@ export default function UmzugsUndEndreinigung() {
       {/* Hero Section */}
       <div className="h-[60vh] min-h-[500px] relative">
         <Image
-          src="/assets/moving_bg.png"
+          src="/assets/moving_compressed.jpg"
           alt="Umzugs- & Endreinigung"
           fill
           className="object-cover"

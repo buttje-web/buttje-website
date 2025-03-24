@@ -43,7 +43,7 @@ export default function UeberUnsPage() {
 
             <div className="relative w-full h-[400px]">
               <Image
-                src="/assets/Bildschirmfoto 2025-02-04 um 09.55.06.png"
+                src="/assets/news_compressed.jpg"
                 alt="buttje Team"
                 fill
                 className="object-cover rounded-lg"
