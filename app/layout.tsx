@@ -71,7 +71,7 @@ export default function RootLayout({
               "email": "info@buttje.at",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Stephansplatz 8/20",
+                "streetAddress": "Graben 28/1/12",
                 "addressLocality": "Wien",
                 "postalCode": "1010",
                 "addressCountry": "AT"

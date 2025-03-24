@@ -11,12 +11,12 @@ export default function Footer() {
               <p>
                 <span className="text-[var(--primary)]">Adresse:</span>{" "}
                 <a 
-                  href="https://www.google.com/maps/dir/?api=1&destination=Stephansplatz+8%2F20+1010+Wien" 
+                  href="https://www.google.com/maps/dir/?api=1&destination=Graben+28%2F1%2F12+1010+Wien" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-[var(--primary)] hover:text-[var(--primary-dark)]"
                 >
-                  Stephansplatz 8/20<br />1010 Wien
+                  Graben 28/1/12<br />1010 Wien
                 </a>
               </p>
               <p>

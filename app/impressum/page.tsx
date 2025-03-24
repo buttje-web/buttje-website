@@ -9,7 +9,7 @@ export default function ImpressumPage() {
             <h2>Angaben gemäß § 5 ECG</h2>
             <p>
               buttje Reinigungs- und Servicedienstleistungen<br />
-              Stephansplatz 8/20<br />
+              Graben 28/1/12<br />
               1010 Wien<br />
               Österreich
             </p>
