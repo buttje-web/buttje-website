@@ -34,7 +34,7 @@ export default function UmzugsUndEndreinigung() {
       <div className="h-[60vh] min-h-[500px] relative">
         <Image
           src="/assets/moving_compressed.jpg"
-          alt="Umzugs- & Endreinigung"
+          alt="Umzüge & Endreinigungen"
           fill
           className="object-cover"
           priority
@@ -44,10 +44,10 @@ export default function UmzugsUndEndreinigung() {
           <div className="container-custom pb-16">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Umzugs- & Endreinigung
+                Umzüge & Endreinigungen
               </h1>
               <p className="text-xl md:text-2xl text-gray-200 font-light">
-                Komplette Umzugsservices & professionelle Endreinigung – alles aus einer Hand
+                Professionelle Umzüge und Endreinigungen für gewerbliche Objekte
               </p>
             </div>
           </div>
@@ -62,72 +62,35 @@ export default function UmzugsUndEndreinigung() {
               Unsere Leistungen
             </h2>
             <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
-              Ein Umzug kann stressig sein – wir machen es Ihnen einfach! Buttje e.U. bietet Ihnen einen vollständigen
-              Umzugsservice inklusive Transport & Reinigung.
+              Professionelle Umzüge und Endreinigungen für gewerbliche Objekte mit höchsten Standards für Qualität und Diskretion.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16" role="list">
             {[
               {
-                title: "Umzugsreinigung",
-                description: "Professionelle Reinigung beim Ein- oder Auszug"
+                title: "Gewerbliche Umzüge",
+                description: "Professionelle Umzüge für Unternehmen und Kanzleien"
               },
               {
-                title: "Endreinigung",
-                description: "Gründliche Reinigung nach Mietende"
+                title: "Endreinigungen",
+                description: "Gründliche Reinigung nach Umzügen"
               },
               {
-                title: "Bauendreinigung",
-                description: "Reinigung nach Renovierung oder Neubau"
+                title: "Objektübergaben",
+                description: "Professionelle Übergabe von Räumlichkeiten"
               },
               {
-                title: "Wohnungsreinigung",
-                description: "Komplette Reinigung von Wohnungen & Häusern"
+                title: "Büroausstattung",
+                description: "Demontage und Montage von Büromöbeln"
               },
               {
-                title: "Abnahmegarantie",
-                description: "Garantierte Abnahme durch den Vermieter"
-              }
-            ].map((service, index) => (
-              <article
-                key={index}
-                className={`p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow ${index % 2 === 0 ? 'slide-in-left' : 'slide-in-right'} animate-delay-${index + 1}`}
-                role="listitem"
-              >
-                <h3 className="text-xl font-semibold mb-3 text-[var(--primary)]">
-                  {service.title}
-                </h3>
-                <p className="text-gray-800">
-                  {service.description}
-                </p>
-              </article>
-            ))}
-          </div>
-
-          <div className="text-center mb-24">
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-gray-900">
-              Für wen ist unser Service geeignet?
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16" role="list">
-            {[
-              {
-                title: "Privatkunden",
-                description: "Stressfreier Umzug in ein neues Zuhause"
+                title: "Verpackung & Transport",
+                description: "Sichere Verpackung und Transport von Büroausstattung"
               },
               {
-                title: "Unternehmen",
-                description: "Effiziente & schnelle Firmenumzüge"
-              },
-              {
-                title: "Immobilienverwaltungen & Makler",
-                description: "Perfekte Objektübergaben"
-              },
-              {
-                title: "Vermieter & Mieter",
-                description: "Reibungslose Kautionsrückerstattung"
+                title: "Qualitätskontrolle",
+                description: "Finale Kontrolle und Übergabe"
               }
             ].map((service, index) => (
               <article
@@ -151,7 +114,7 @@ export default function UmzugsUndEndreinigung() {
                 href="tel:+4312366326442"
                 className="btn-primary"
               >
-                Jetzt Umzug & Reinigung kombinieren
+                Jetzt anfragen
               </a>
               <Link
                 href="/#kontakt"

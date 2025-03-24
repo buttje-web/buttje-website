@@ -41,12 +41,12 @@ export default function UeberUnsPage() {
               buttje ist mehr als eine Dienstleistung. Es ist ein Versprechen an uns selbst und an unsere Kunden: Wir machen keine halben Sachen. Wir hinterlassen keinen Schmutz, keine Spuren, aber immer einen Eindruck.
             </p>
 
-            <div className="relative w-full h-[400px]">
+            <div className="h-[60vh] min-h-[500px] relative">
               <Image
-                src="/assets/news_compressed.jpg"
-                alt="buttje Team"
+                src="/assets/team_compressed.jpg"
+                alt="Über uns"
                 fill
-                className="object-cover rounded-lg"
+                className="object-cover"
                 priority
               />
             </div>

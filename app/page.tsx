@@ -166,7 +166,7 @@ export default function Home() {
                 link: "/dienstleistungen/gewerbliche-reinigung"
               },
               {
-                title: "Umzugs- & Endreinigung",
+                title: "Umzüge & Endreinigungen",
                 description: "Perfekte Sauberkeit für Mieter, Eigentümer und Immobilienverwaltungen.",
                 image: "/assets/moving_compressed.jpg",
                 link: "/dienstleistungen/umzugs-und-endreinigung"
