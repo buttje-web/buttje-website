@@ -171,8 +171,6 @@ export default function Home() {
                 image: "/assets/moving_compressed.jpg",
                 link: "/dienstleistungen/umzugs-und-endreinigung"
               },
-              },
-              },
               {
                 title: "Facility Services",
                 description: "Hausmeisterdienste, Pflege von Außenanlagen und Sonderreinigungen.",
