@@ -90,7 +90,6 @@ export default function Home() {
 
   return (
       {/* Hero Section */}
-      return (
   {/* Hero Section */}
   <section className="relative min-h-[calc(100vh-4rem)] flex items-start md:items-center justify-center pt-32 pb-32 md:py-0" aria-label="Willkommen">
         {/* Hero Background Video */}
