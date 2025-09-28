@@ -95,7 +95,9 @@ export default function RootLayout({
               },
               "priceRange": "€€",
               "areaServed": "Wien"
-           })}
+            })
+          }}
+        />
       </head>
       <body className={`${frutiger.variable} antialiased min-h-screen flex flex-col`}>
         <Header />
