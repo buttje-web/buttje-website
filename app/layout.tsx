@@ -96,7 +96,17 @@ export default function RootLayout({
               "priceRange": "€€",
               "areaServed": "Wien"
             })
-          }}
+          <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17533089249">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-17533089249');
+</script>
+      }}
         />
       </head>
       <body className={`${frutiger.variable} antialiased min-h-screen flex flex-col`}>
