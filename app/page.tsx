@@ -70,9 +70,7 @@ export default function Home() {
 
   return (
     <>
-      {/* Hero Section */}
       <section className="relative min-h-[calc(100vh-4rem)] flex items-start md:items-center justify-center pt-32 pb-32 md:py-0" aria-label="Willkommen">
-        {/* Hero Background Video */}
         <div className="absolute inset-0 w-full h-[140vh] md:h-full -translate-y-24 md:translate-y-0">
           <video
             ref={videoRef}
