@@ -106,8 +106,6 @@ export default function RootLayout({
 
   gtag('config', 'AW-17533089249');
 </script>
-      }}
-        />
       </head>
       <body className={`${frutiger.variable} antialiased min-h-screen flex flex-col`}>
         <Header />
