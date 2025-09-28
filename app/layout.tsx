@@ -107,9 +107,7 @@ export default function RootLayout({
         <Footer />
         <FloatingContact />
         <CookieConsent />
-      </body>
+          </body>
     </html>
-  );
-}
   );
 }
