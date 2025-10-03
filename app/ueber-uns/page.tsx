@@ -1,4 +1,7 @@
+'use client';
+
 import Image from 'next/image';
+import { trackPhoneCall, trackEmailClick } from '../utils/gtag';
 
 export default function UeberUnsPage() {
   return (
@@ -76,6 +79,7 @@ export default function UeberUnsPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+4312366326442"
+                onClick={() => trackPhoneCall('+4312366326442', 'ueber_uns_page')}
                 className="inline-block bg-white text-[var(--primary)] font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors flex items-center justify-center gap-2"
               >
                 <svg 
@@ -95,6 +99,7 @@ export default function UeberUnsPage() {
               </a>
               <a
                 href="mailto:info@buttje.at"
+                onClick={() => trackEmailClick('info@buttje.at', 'ueber_uns_page')}
                 className="btn-secondary flex items-center justify-center gap-2"
               >
                 <svg 

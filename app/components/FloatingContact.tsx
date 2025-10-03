@@ -1,8 +1,13 @@
+'use client';
+
+import { trackPhoneCall, trackEmailClick } from '../utils/gtag';
+
 export default function FloatingContact() {
   return (
     <div style={{ position: 'fixed', bottom: '1rem', right: '1rem' }} className="flex flex-col gap-2 z-50">
       <a
         href="tel:+4312366326442"
+        onClick={() => trackPhoneCall('+4312366326442', 'floating_contact')}
         className="bg-white text-[var(--primary)] p-3 rounded-full shadow-lg hover:shadow-xl transition-all"
         aria-label="Jetzt anrufen"
       >
@@ -22,6 +27,7 @@ export default function FloatingContact() {
       </a>
       <a
         href="mailto:info@buttje.at"
+        onClick={() => trackEmailClick('info@buttje.at', 'floating_contact')}
         className="bg-white text-[var(--primary)] p-3 rounded-full shadow-lg hover:shadow-xl transition-all"
         aria-label="E-Mail schreiben"
       >

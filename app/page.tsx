@@ -5,6 +5,8 @@ import GoogleMap from "./components/GoogleMap";
 import { useRef } from "react";
 import Image from 'next/image';
 import Link from 'next/link';
+import { trackPhoneCall, trackEmailClick, trackButtonClick } from './utils/gtag';
+import ConversionTest from './components/ConversionTest';
 
 // Add this type before the services array
 type Service = {
@@ -421,6 +423,7 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                 <a
                   href="tel:+4312366326442"
+                  onClick={() => trackPhoneCall('+4312366326442', 'hero_section')}
                   className="inline-block bg-white text-[var(--primary)] font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors flex items-center justify-center gap-2"
                 >
                   <svg 
@@ -440,6 +443,7 @@ export default function Home() {
                 </a>
                 <a
                   href="mailto:info@buttje.at"
+                  onClick={() => trackEmailClick('info@buttje.at', 'hero_section')}
                   className="inline-block bg-white text-[var(--primary)] font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors flex items-center justify-center gap-2"
                 >
                   <svg 
@@ -461,6 +465,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <ConversionTest />
     </>
   );
 }

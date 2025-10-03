@@ -1,4 +1,7 @@
+'use client';
+
 import Link from 'next/link';
+import { trackPhoneCall, trackEmailClick } from '../utils/gtag';
 
 export default function Footer() {
   return (
@@ -21,13 +24,21 @@ export default function Footer() {
               </p>
               <p>
                 <span className="text-[var(--primary)]">Telefon:</span>{" "}
-                <a href="tel:+4312366326442" className="text-[var(--primary)] hover:text-[var(--primary-dark)]">
+                <a 
+                  href="tel:+4312366326442" 
+                  onClick={() => trackPhoneCall('+4312366326442', 'footer')}
+                  className="text-[var(--primary)] hover:text-[var(--primary-dark)]"
+                >
                   +43 123 66326442
                 </a>
               </p>
               <p>
                 <span className="text-[var(--primary)]">E-Mail:</span>{" "}
-                <a href="mailto:info@buttje.at" className="text-[var(--primary)] hover:text-[var(--primary-dark)]">
+                <a 
+                  href="mailto:info@buttje.at" 
+                  onClick={() => trackEmailClick('info@buttje.at', 'footer')}
+                  className="text-[var(--primary)] hover:text-[var(--primary-dark)]"
+                >
                   info@buttje.at
                 </a>
               </p>
