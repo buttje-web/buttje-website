@@ -6,7 +6,6 @@ import { useRef } from "react";
 import Image from 'next/image';
 import Link from 'next/link';
 import { trackPhoneCall, trackEmailClick, trackButtonClick } from './utils/gtag';
-import ConversionTest from './components/ConversionTest';
 
 // Add this type before the services array
 type Service = {
@@ -465,7 +464,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <ConversionTest />
     </>
   );
 }
