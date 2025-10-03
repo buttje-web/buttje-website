@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import localFont from 'next/font/local'
 import FloatingContact from "./components/FloatingContact";
 import CookieConsent from "./components/CookieConsent";
+import Script from 'next/script';
 
 const frutiger = localFont({
   src: '../public/fonts/FrutigerLTStd-Light.otf',
@@ -99,17 +100,18 @@ export default function RootLayout({
           }}
         />
         {/* Google tag (gtag.js) */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17533089249"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'AW-17533089249');
-            `,
-          }}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17533089249"
+          strategy="afterInteractive"
         />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-17533089249');
+          `}
+        </Script>
       </head>
       <body className={`${frutiger.variable} antialiased min-h-screen flex flex-col`}>
         <Header />
