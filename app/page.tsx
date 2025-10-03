@@ -172,12 +172,6 @@ export default function Home() {
                 link: "/dienstleistungen/umzugs-und-endreinigung"
               },
               {
-                title: "Handwerkliche Zusatzservices",
-                description: "Kleinreparaturen, Malerarbeiten, Bodenverlegung und Trockenbau.",
-                image: "/assets/roller_compressed.jpg",
-                link: "/dienstleistungen/handwerkliche-zusatzservices"
-              },
-              {
                 title: "Facility Services",
                 description: "Hausmeisterdienste, Pflege von Außenanlagen und Sonderreinigungen.",
                 image: "/assets/team_compressed.jpg",
