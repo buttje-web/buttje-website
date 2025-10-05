@@ -77,7 +77,7 @@ export default function RootLayout({
               "description": "Professionelle Reinigungsdienstleistungen mit höchsten Standards für Qualität, Hygiene und Diskretion.",
               "@id": "https://buttje.at",
               "url": "https://buttje.at",
-              "telephone": "+4367762395080",
+              "telephone": ["+4367762395080", "+4312366326442"],
               "email": "info@buttje.at",
               "address": {
                 "@type": "PostalAddress",

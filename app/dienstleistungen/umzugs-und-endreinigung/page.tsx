@@ -114,7 +114,13 @@ export default function UmzugsUndEndreinigung() {
                 href="tel:+4367762395080"
                 className="btn-primary"
               >
-                Jetzt anfragen
+                Jetzt anfragen (Mobil)
+              </a>
+              <a
+                href="tel:+4312366326442"
+                className="btn-primary"
+              >
+                Jetzt anfragen (Büro)
               </a>
               <Link
                 href="/#kontakt"

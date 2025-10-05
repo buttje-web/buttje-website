@@ -31,6 +31,17 @@ export default function Footer() {
                 >
                   +43 677 62395080
                 </a>
+                <span className="text-sm text-gray-600 ml-1">(Mobil)</span>
+              </p>
+              <p>
+                <span className="text-[var(--primary)]">Büro:</span>{" "}
+                <a 
+                  href="tel:+4312366326442" 
+                  onClick={() => trackPhoneCall('+4312366326442', 'footer')}
+                  className="text-[var(--primary)] hover:text-[var(--primary-dark)]"
+                >
+                  +43 123 66326442
+                </a>
               </p>
               <p>
                 <span className="text-[var(--primary)]">E-Mail:</span>{" "}
