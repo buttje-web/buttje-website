@@ -17,6 +17,15 @@ export const metadata: Metadata = {
   title: "buttje | Professionelle Reinigung & Möbelservice",
   description: "Hochwertige Reinigungsdienstleistungen und Möbelservice mit höchsten Standards für Qualität, Hygiene und Diskretion. Ein Lappen pro Tisch - für maximale Sauberkeit.",
   keywords: "Reinigungsservice, Möbelservice, Hygiene, Diskretion, Qualitätsreinigung, Möbelpflege, Wien, Professionelle Reinigung, Stephansplatz",
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon.png', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/favicon.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
   openGraph: {
     title: 'buttje | Professionelle Reinigung & Möbelservice',
     description: 'Hochwertige Reinigungsdienstleistungen und Möbelservice mit höchsten Standards für Qualität, Hygiene und Diskretion.',
