@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://buttje.de/sitemap.xml 
+Sitemap: https://buttje.at/sitemap.xml 
