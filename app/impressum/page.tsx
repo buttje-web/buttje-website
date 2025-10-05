@@ -17,7 +17,7 @@ export default function ImpressumPage() {
             
             <p className="mt-4">
               <strong>Kontakt:</strong><br />
-              Telefon: +43 1 236 632 6 442<br />
+              Telefon: +43 677 62395080<br />
               E-Mail: info@buttje.at
             </p>
 

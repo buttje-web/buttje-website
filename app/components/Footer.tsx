@@ -25,11 +25,11 @@ export default function Footer() {
               <p>
                 <span className="text-[var(--primary)]">Telefon:</span>{" "}
                 <a 
-                  href="tel:+4312366326442" 
-                  onClick={() => trackPhoneCall('+4312366326442', 'footer')}
+                  href="tel:+4367762395080" 
+                  onClick={() => trackPhoneCall('+4367762395080', 'footer')}
                   className="text-[var(--primary)] hover:text-[var(--primary-dark)]"
                 >
-                  +43 123 66326442
+                  +43 677 62395080
                 </a>
               </p>
               <p>
