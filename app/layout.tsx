@@ -20,11 +20,11 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },
-      { url: '/assets/logo.png', sizes: 'any' },
-      { url: '/assets/logo.png', type: 'image/png' },
+      { url: '/favicon.png', sizes: 'any' },
+      { url: '/favicon.png', type: 'image/png' },
     ],
     apple: [
-      { url: '/assets/logo.png', sizes: '180x180', type: 'image/png' },
+      { url: '/assets/logo-new.png', sizes: '180x180', type: 'image/png' },
     ],
   },
   openGraph: {
@@ -68,8 +68,8 @@ export default function RootLayout({
     <html lang="de">
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/assets/logo.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/assets/logo.png" />
+        <link rel="icon" href="/favicon.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/assets/logo-new.png" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
