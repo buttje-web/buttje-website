@@ -22,7 +22,6 @@ export default function Header() {
               </div>
             </div>
           </Link>
-
           {/* Desktop Navigation */}
           <div className="hidden md:flex gap-8">
             <Link href="/#dienstleistungen" className="text-gray-900 hover:text-[var(--primary)]">
