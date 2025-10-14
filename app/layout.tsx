@@ -20,10 +20,11 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },
-      { url: '/favicon.png', type: 'image/png' },
+      { url: '/assets/logo.png', sizes: 'any' },
+      { url: '/assets/logo.png', type: 'image/png' },
     ],
     apple: [
-      { url: '/favicon.png', sizes: '180x180', type: 'image/png' },
+      { url: '/assets/logo.png', sizes: '180x180', type: 'image/png' },
     ],
   },
   openGraph: {
