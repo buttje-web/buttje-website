@@ -421,8 +421,8 @@ export default function Home() {
               </div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                 <a
-                  href="tel:+4367762395080"
-                  onClick={() => trackPhoneCall('+4367762395080', 'hero_section')}
+                  href="tel:+4368110113106"
+                  onClick={() => trackPhoneCall('+4368110113106', 'hero_section')}
                   className="inline-block bg-white text-[var(--primary)] font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors flex items-center justify-center gap-2"
                 >
                   <svg 
