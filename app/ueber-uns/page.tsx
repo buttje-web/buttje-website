@@ -78,8 +78,8 @@ export default function UeberUnsPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+4368110113106"
-                onClick={() => trackPhoneCall('+4368110113106', 'ueber_uns_page')}
+                href="tel:‭+4367762080802‬"
+                onClick={() => trackPhoneCall('‭+4367762080802‬', 'ueber_uns_page')}
                 className="inline-block bg-white text-[var(--primary)] font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors flex items-center justify-center gap-2"
               >
                 <svg 
