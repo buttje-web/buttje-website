@@ -35,8 +35,8 @@ export default function Footer() {
               </p>
               <p>
                 <span className="text-[var(--primary)]">Büro:</span>{" "}
-                <a 
-                  href="tel:+4312366326442" 
+                <a
+                  href="tel:+4312366326442"
                   onClick={() => trackPhoneCall('+4312366326442', 'footer')}
                   className="text-[var(--primary)] hover:text-[var(--primary-dark)]"
                 >
