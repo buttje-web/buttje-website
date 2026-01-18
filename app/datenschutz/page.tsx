@@ -11,8 +11,7 @@ export default function DatenschutzPage() {
             Buttje e.U.<br />
             Inhaber: Rami Ibraimi<br />
             Graben 28/1/12, 1010 Wien<br />
-            +43 677 62395080 (Mobil)<br />
-            +43 123 66326442 (Büro)<br />
+            +43 677 620 80 802<br />
             info@buttje.at
           </p>
 
