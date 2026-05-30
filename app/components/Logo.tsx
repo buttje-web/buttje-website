@@ -11,9 +11,9 @@ interface LogoProps {
 export default function Logo({ variant = 'dark', className = 'h-9' }: LogoProps) {
   return (
     <Image
-      src="/buttje_logo_schwarz.png"
+      src="/buttje_logo_schwarz_v2.png"
       alt="buttje Gebäudereinigung Wien"
-      width={108}
+      width={112}
       height={40}
       className={`w-auto object-contain ${className}${variant === 'light' ? ' brightness-0 invert' : ''}`}
       priority
