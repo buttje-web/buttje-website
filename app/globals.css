@@ -21,14 +21,15 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: var(--font-frutiger), system-ui, sans-serif;
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
   word-wrap: break-word;
   overflow-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-frutiger), Georgia, serif;
+  font-family: var(--font-inter), system-ui, sans-serif;
   letter-spacing: -0.02em;
 }
 
@@ -50,11 +51,11 @@ html {
   }
   
   .btn-primary {
-    @apply bg-[var(--primary)] text-white font-semibold py-3 px-8 rounded-lg hover:bg-[var(--primary-dark)] transition-all duration-300 hover:scale-105;
+    @apply inline-flex items-center justify-center gap-2 bg-[var(--primary)] text-white font-semibold py-3 px-8 rounded-lg hover:bg-[var(--primary-dark)] transition-colors duration-200;
   }
-  
+
   .btn-secondary {
-    @apply bg-white text-[var(--primary)] font-semibold py-3 px-8 rounded-lg border border-[var(--primary)] hover:bg-gray-50 transition-all duration-300 hover:scale-105;
+    @apply inline-flex items-center justify-center gap-2 bg-white text-[var(--primary)] font-semibold py-3 px-8 rounded-lg border border-[var(--primary)] hover:bg-gray-50 transition-colors duration-200;
   }
 }
 

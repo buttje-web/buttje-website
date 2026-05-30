@@ -11,7 +11,7 @@ export default function DatenschutzPage() {
             Buttje e.U.<br />
             Inhaber: Rami Ibraimi<br />
             Graben 28/1/12, 1010 Wien<br />
-            +43 677 620 80 802<br />
+            +43 677 62080802<br />
             info@buttje.at
           </p>
 
@@ -105,8 +105,7 @@ export default function DatenschutzPage() {
           </p>
           <ul>
             <li>Rechnungsdaten: 7 Jahre (gesetzliche Aufbewahrungspflicht)</li>
-            <li>Anfragen per E-Mail: 1 Jahr, sofern keine Geschäftsbeziehung entsteht</li>
-            <li>Bewerbungen: 6 Monate nach Abschluss des Bewerbungsprozesses</li>
+            <li>Anfragen per E-Mail oder Kontaktformular: 1 Jahr, sofern keine Geschäftsbeziehung entsteht</li>
           </ul>
 
           <h2>8. Ihre Rechte</h2>
@@ -123,7 +122,7 @@ export default function DatenschutzPage() {
           </ul>
 
           <p>
-            Zur Ausübung dieser Rechte kontaktieren Sie uns unter: [E-Mail-Adresse]
+            Zur Ausübung dieser Rechte kontaktieren Sie uns unter: info@buttje.at
           </p>
 
           <h2>9. Cookies und Tracking-Technologien</h2>

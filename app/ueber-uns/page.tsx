@@ -1,146 +1,90 @@
-'use client';
-
+import type { Metadata } from 'next';
 import Image from 'next/image';
-import { trackPhoneCall, trackEmailClick } from '../utils/gtag';
+import Link from 'next/link';
+import CallButton from '../components/CallButton';
+
+export const metadata: Metadata = {
+  title: 'Über uns',
+  description:
+    'buttje steht für Premium Gebäudereinigung in Wien: norddeutsche Gründlichkeit, höchster Anspruch und gelebte Diskretion. Lernen Sie unsere Haltung kennen.',
+  alternates: { canonical: '/ueber-uns' },
+};
 
 export default function UeberUnsPage() {
   return (
     <div className="bg-white">
-      {/* Hero Section */}
+      {/* Hero */}
       <section className="relative py-24 bg-[var(--primary)]">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center text-white">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Über uns – buttje ist mehr als ein Name
-            </h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Über uns, buttje ist mehr als ein Name</h1>
             <p className="text-xl md:text-2xl font-light">
-              Es gibt zwei Arten, einen Job zu machen: Irgendwie – oder richtig.
+              Es gibt zwei Arten, einen Job zu machen: irgendwie oder richtig.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Main Content */}
+      {/* Inhalt */}
       <section className="py-16 md:py-24">
         <div className="container-custom">
-          <div className="max-w-3xl mx-auto prose prose-lg prose-headings:text-gray-900 prose-p:text-gray-800">
-            <p className="lead text-xl">
-              buttje steht für die zweite Variante. Für Qualität, die nicht verhandelbar ist. Für einen Anspruch, der nicht von Budgets oder Deadlines abhängt, sondern von einer inneren Haltung: Wenn wir etwas tun, dann richtig.
+          <div className="max-w-3xl mx-auto space-y-12">
+            <p className="text-xl text-gray-800 leading-relaxed">
+              buttje steht für die zweite Variante. Für Qualität, die nicht verhandelbar ist. Für einen
+              Anspruch, der nicht von Budgets oder Deadlines abhängt, sondern von einer inneren Haltung:
+              Wenn wir etwas tun, dann richtig.
             </p>
 
-            <h2 className="text-3xl font-bold mt-12 mb-6">Wurzeln in Hamburg, Zuhause in Wien</h2>
-            <p>
-              buttje ist kein neues Konzept. Es ist ein Name, der eine Geschichte trägt. In Hamburg haben wir gelernt, dass echte Perfektion nicht laut sein muss. Sie zeigt sich in den kleinen Dingen – in der Sorgfalt, in der Beständigkeit, in dem Wissen, dass ein Job erst dann fertig ist, wenn er es verdient hat, als &quot;fertig&quot; bezeichnet zu werden.
-            </p>
-            <p>
-              Wir haben in einer Stadt gearbeitet, in der das Wetter hart ist, aber die Mentalität noch härter. Wo kein Platz für &quot;heiße Luft&quot; ist, sondern nur für Ergebnisse. Diese Einstellung haben wir mit nach Wien gebracht – und sie hat sich kein Stück verändert.
-            </p>
-
-            <h2 className="text-3xl font-bold mt-12 mb-6">Unsere Philosophie – Kein Mittelmaß, keine Ausreden</h2>
-            <p>
-              Sauberkeit ist nicht nur das, was man sieht. Es ist das, was bleibt, wenn niemand hinschaut. Es ist der Unterschied zwischen &quot;gereinigt&quot; und wirklich sauber.
-            </p>
-            <p>
-              buttje ist mehr als eine Dienstleistung. Es ist ein Versprechen an uns selbst und an unsere Kunden: Wir machen keine halben Sachen. Wir hinterlassen keinen Schmutz, keine Spuren, aber immer einen Eindruck.
-            </p>
-
-            <div className="h-[60vh] min-h-[500px] relative">
-              <Image
-                src="/assets/team_compressed.jpg"
-                alt="Über uns"
-                fill
-                className="object-cover"
-                priority
-              />
+            <div>
+              <h2 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">Wurzeln im Norden, zuhause in Wien</h2>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                buttje kommt aus dem Norden, und mit dem Namen kam eine Haltung: Perfektion muss nicht laut
+                sein. Sie zeigt sich in Sorgfalt, in Beständigkeit und in dem Wissen, dass eine Arbeit erst
+                dann fertig ist, wenn sie es verdient hat, so genannt zu werden. Diese Einstellung haben wir
+                nach Wien gebracht, und sie hat sich kein Stück verändert.
+              </p>
             </div>
 
-            <h2 className="text-3xl font-bold mt-12 mb-6">20 Jahre Erfahrung – und kein bisschen müde</h2>
-            <p>
-              Zwei Jahrzehnte in dieser Branche haben uns eines gezeigt: Gute Arbeit spricht für sich selbst. Man muss sie nicht verkaufen, nicht bewerben – man muss sie nur tun.
-            </p>
-            <p>
-              Wir haben für Menschen gearbeitet, die keine Fehler dulden, und haben gelernt, dass die höchste Form der Anerkennung Stille ist. Wenn niemand etwas sagt, wenn einfach alles passt – dann weißt du, dass du es richtig gemacht hast.
-            </p>
-            <p className="text-xl font-semibold text-[var(--primary)] mt-8">
-              Genau das ist unser Maßstab. Jeden Tag.
-            </p>
+            <div className="h-[55vh] min-h-[420px] relative rounded-xl overflow-hidden">
+              <Image src="/assets/team_compressed.jpg" alt="Das Team von buttje" fill className="object-cover" priority />
+            </div>
+
+            <div>
+              <h2 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">Unser Anspruch, kein Mittelmaß</h2>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Sauberkeit ist nicht nur das, was man sieht. Es ist das, was bleibt, wenn niemand hinschaut.
+                Es ist der Unterschied zwischen &quot;gereinigt&quot; und wirklich sauber. Wir machen keine halben
+                Sachen und hinterlassen keine Spuren, aber immer einen guten Eindruck.
+              </p>
+            </div>
+
+            <div>
+              <h2 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">Diskretion als Selbstverständnis</h2>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Wir arbeiten dort, wo Vertrauen zählt: in Kanzleien, Ordinationen und Unternehmen mit
+                sensiblen Daten. Geschultes, fest eingeteiltes Personal, klare Abläufe und absolute
+                Verschwiegenheit sind für uns kein Zusatz, sondern Grundlage.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-gray-50">
+      {/* CTA */}
+      <section className="py-16 bg-gray-50 border-t">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6 text-gray-900">Lernen Sie uns kennen</h2>
-            <p className="text-xl text-gray-600 mb-8">
-              Erfahren Sie, wie wir auch Ihr Projekt mit höchster Qualität umsetzen können.
+            <h2 className="text-3xl font-bold mb-4 text-gray-900">Lernen Sie uns kennen</h2>
+            <p className="text-lg text-gray-600 mb-8">
+              Am besten in einem kurzen Gespräch. Wir hören zu und finden die passende Lösung für Ihr Objekt.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:‭+4367762080802‬"
-                onClick={() => trackPhoneCall('‭+4367762080802‬', 'ueber_uns_page')}
-                className="inline-block bg-white text-[var(--primary)] font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors flex items-center justify-center gap-2"
-              >
-                <svg 
-                  viewBox="0 0 24 24" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  className="w-5 h-5"
-                  strokeWidth="2"
-                >
-                  <path 
-                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round"
-                  />
-                </svg>
-                Jetzt anrufen (Mobil)
-              </a>
-              <a
-                href="tel:+4312366326442"
-                onClick={() => trackPhoneCall('+4312366326442', 'ueber_uns_page')}
-                className="inline-block bg-white text-[var(--primary)] font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors flex items-center justify-center gap-2"
-              >
-                <svg 
-                  viewBox="0 0 24 24" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  className="w-5 h-5"
-                  strokeWidth="2"
-                >
-                  <path 
-                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round"
-                  />
-                </svg>
-                Jetzt anrufen (Büro)
-              </a>
-              <a
-                href="mailto:info@buttje.at"
-                onClick={() => trackEmailClick('info@buttje.at', 'ueber_uns_page')}
-                className="btn-secondary flex items-center justify-center gap-2"
-              >
-                <svg 
-                  viewBox="0 0 24 24" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  className="w-5 h-5"
-                  strokeWidth="2"
-                >
-                  <path 
-                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round"
-                  />
-                </svg>
-                E-Mail schreiben
-              </a>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <CallButton location="ueber_uns_page" />
+              <Link href="/#angebot" className="btn-secondary">Angebot anfordern</Link>
             </div>
           </div>
         </div>
       </section>
     </div>
   );
-} 
+}

@@ -1,47 +1,69 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import localFont from 'next/font/local'
-import FloatingContact from "./components/FloatingContact";
+import MobileCallBar from "./components/MobileCallBar";
 import CookieConsent from "./components/CookieConsent";
-import Script from 'next/script';
+import {
+  SITE_URL,
+  PHONE_MOBILE,
+  PHONE_OFFICE,
+  EMAIL,
+  ADDRESS,
+} from "./lib/contact";
 
-const frutiger = localFont({
-  src: '../public/fonts/FrutigerLTStd-Light.otf',
-  display: 'swap',
-  variable: '--font-frutiger'
-})
+// Einzige Hausschrift: Inter, selbst gehostet ueber next/font (kein externer
+// Request, kein Layout-Shift). Gilt fuer Fliesstext und Ueberschriften.
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+});
 
 export const metadata: Metadata = {
-  title: "buttje | Professionelle Reinigung & Möbelservice",
-  description: "Hochwertige Reinigungsdienstleistungen und Möbelservice mit höchsten Standards für Qualität, Hygiene und Diskretion. Ein Lappen pro Tisch - für maximale Sauberkeit.",
-  keywords: "Reinigungsservice, Möbelservice, Hygiene, Diskretion, Qualitätsreinigung, Möbelpflege, Wien, Professionelle Reinigung, Stephansplatz",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "buttje | Premium Gebäudereinigung Wien",
+    template: "%s | buttje Gebäudereinigung Wien",
+  },
+  description:
+    "Professionelle Reinigung für Unternehmen jeder Größe. Büro, Kanzlei, Ordination, Hotel oder Hausverwaltung, makellos und diskret. Jetzt anrufen oder Angebot anfordern.",
+  keywords: [
+    "Gebäudereinigung Wien",
+    "Büroreinigung Wien",
+    "Kanzleireinigung",
+    "Praxisreinigung",
+    "Ordinationsreinigung",
+    "Unterhaltsreinigung",
+    "Facility Services Wien",
+    "Endreinigung Wien",
+    "Premium Reinigung",
+  ],
+  authors: [{ name: "buttje e.U." }],
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: "buttje | Premium Gebäudereinigung Wien",
+    description:
+      "Professionelle Reinigung für Unternehmen jeder Größe. Büro, Kanzlei, Ordination, Hotel oder Hausverwaltung, makellos und diskret.",
+    url: SITE_URL,
+    siteName: "buttje",
+    locale: "de_AT",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "buttje | Premium Gebäudereinigung Wien",
+    description:
+      "Professionelle Reinigung für Unternehmen jeder Größe. Büro, Kanzlei, Ordination, Hotel oder Hausverwaltung, makellos und diskret.",
+  },
   icons: {
     icon: [
-      { url: '/favicon.ico', sizes: 'any' },
-      { url: '/favicon.png', sizes: 'any' },
-      { url: '/favicon.png', type: 'image/png' },
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.png", type: "image/png" },
     ],
-    apple: [
-      { url: '/assets/logo-new.png', sizes: '180x180', type: 'image/png' },
-    ],
-  },
-  openGraph: {
-    title: 'buttje | Professionelle Reinigung & Möbelservice',
-    description: 'Hochwertige Reinigungsdienstleistungen und Möbelservice mit höchsten Standards für Qualität, Hygiene und Diskretion.',
-    url: 'https://buttje.at',
-    siteName: 'buttje',
-    locale: 'de_AT',
-    type: 'website',
-    images: [
-      {
-        url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'buttje Reinigungsservice',
-      }
-    ],
+    apple: [{ url: "/favicon.png", sizes: "180x180", type: "image/png" }],
   },
   robots: {
     index: true,
@@ -49,68 +71,87 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
     },
   },
-  verification: {
-    google: 'your-google-verification-code',
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CleaningService",
+  "@id": `${SITE_URL}/#business`,
+  name: "buttje",
+  legalName: "buttje e.U.",
+  description:
+    "Premium Gebäudereinigung in Wien für Unternehmen: Büro- und Kanzleireinigung, Ordinations- und Praxisreinigung, Gebäude- und Unterhaltsreinigung, Facility Services sowie Umzugs- und Endreinigung.",
+  url: SITE_URL,
+  image: `${SITE_URL}/opengraph-image`,
+  telephone: PHONE_MOBILE,
+  email: EMAIL,
+  priceRange: "€€€",
+  currenciesAccepted: "EUR",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: ADDRESS.street,
+    addressLocality: ADDRESS.city,
+    postalCode: ADDRESS.postalCode,
+    addressCountry: ADDRESS.country,
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 48.2083,
+    longitude: 16.3709,
+  },
+  areaServed: { "@type": "City", name: "Wien" },
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      telephone: PHONE_MOBILE,
+      contactType: "sales",
+      areaServed: "AT",
+      availableLanguage: ["de"],
+    },
+    {
+      "@type": "ContactPoint",
+      telephone: PHONE_OFFICE,
+      contactType: "customer service",
+      areaServed: "AT",
+      availableLanguage: ["de"],
+    },
+  ],
+  openingHoursSpecification: {
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    opens: "08:00",
+    closes: "18:00",
+  },
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Reinigungsleistungen",
+    itemListElement: [
+      "Büro- und Kanzleireinigung",
+      "Ordinations- und Praxisreinigung",
+      "Gebäude- und Unterhaltsreinigung",
+      "Facility Services",
+      "Umzugs- und Endreinigung",
+    ].map((service) => ({
+      "@type": "Offer",
+      itemOffered: { "@type": "Service", name: service },
+    })),
   },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="de">
+    <html lang="de" className={inter.variable}>
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/favicon.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/assets/logo-new.png" />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "LocalBusiness",
-              "name": "buttje",
-              "image": "/og-image.jpg",
-              "description": "Professionelle Reinigungsdienstleistungen mit höchsten Standards für Qualität, Hygiene und Diskretion.",
-              "@id": "https://buttje.at",
-              "url": "https://buttje.at",
-              "telephone": ["+4367762395080", "+4312366326442"],
-              "email": "info@buttje.at",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "Graben 28/1/12",
-                "addressLocality": "Wien",
-                "postalCode": "1010",
-                "addressCountry": "AT"
-              },
-              "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": 48.2083,
-                "longitude": 16.3731
-              },
-              "openingHoursSpecification": {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": [
-                  "Monday",
-                  "Tuesday",
-                  "Wednesday",
-                  "Thursday",
-                  "Friday"
-                ],
-                "opens": "08:00",
-                "closes": "18:00"
-              },
-              "priceRange": "€€",
-              "areaServed": "Wien"
-            })
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         {/* Google tag (gtag.js) */}
         <Script
@@ -126,13 +167,11 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body className={`${frutiger.variable} antialiased min-h-screen flex flex-col`}>
+      <body className="antialiased min-h-screen flex flex-col">
         <Header />
-        <main className="flex-grow">
-          {children}
-        </main>
+        <main className="flex-grow">{children}</main>
         <Footer />
-        <FloatingContact />
+        <MobileCallBar />
         <CookieConsent />
       </body>
     </html>

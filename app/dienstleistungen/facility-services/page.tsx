@@ -62,7 +62,7 @@ export default function FacilityServices() {
               Unsere Leistungen
             </h2>
             <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
-              Ob Bürogebäude, Wohnhaus oder Gewerbeobjekt – wir bieten umfassende Facility Services,
+              Ob Bürogebäude, Wohnhaus oder Gewerbeobjekt, wir bieten umfassende Facility Services,
               damit Ihre Immobilie stets gepflegt und instand gehalten bleibt.
             </p>
           </div>
@@ -108,7 +108,7 @@ export default function FacilityServices() {
           <div className="text-center">
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+4367762395080"
+                href="tel:+4367762080802"
                 className="btn-primary"
               >
                 Jetzt Beratung anfordern (Mobil)
