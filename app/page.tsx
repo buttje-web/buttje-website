@@ -38,13 +38,6 @@ const services = [
   },
 ];
 
-const trustFacts = [
-  'Im Firmenbuch eingetragen (FN 648848p)',
-  'Reglementiertes Gewerbe mit Befähigungsnachweis',
-  'Mitglied der Wirtschaftskammer Wien',
-  'Vollversichert',
-];
-
 const trust = [
   { title: 'Diskret', text: 'Geschultes Personal, das vertraulich arbeitet. Keine Weitergabe von Informationen.' },
   { title: 'Zuverlässig', text: 'Feste Ansprechpartner und verbindliche Termine, auf die Sie sich verlassen können.' },
@@ -171,22 +164,6 @@ export default function Home() {
               </a>
             </p>
           </div>
-        </div>
-      </section>
-
-      {/* Trust-Streifen */}
-      <section className="border-y border-gray-100 bg-gray-50" aria-label="Betriebsnachweise">
-        <div className="container-custom py-6">
-          <ul className="grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-4">
-            {trustFacts.map((fact) => (
-              <li key={fact} className="flex items-start gap-2.5 text-sm text-gray-700">
-                <svg className="mt-0.5 h-4 w-4 flex-shrink-0 text-[var(--primary)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                </svg>
-                <span>{fact}</span>
-              </li>
-            ))}
-          </ul>
         </div>
       </section>
 
