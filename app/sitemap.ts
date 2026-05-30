@@ -2,7 +2,8 @@ import type { MetadataRoute } from 'next';
 import { SITE_URL } from './lib/contact';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date();
+  // Festes Datum gemaess Vorgabe (statt Build-Zeitpunkt).
+  const lastModified = '2026-05-30';
 
   const routes: { path: string; priority: number; changeFrequency: 'monthly' | 'yearly' }[] = [
     { path: '/', priority: 1.0, changeFrequency: 'monthly' },
