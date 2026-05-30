@@ -6,7 +6,7 @@ export default function AGBPage() {
         
         <div className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-800 prose-li:text-gray-800">
           <p className="text-lg text-gray-600 mb-12">
-            Stand: Februar 2025
+            Stand: Mai 2026
           </p>
 
           <div className="space-y-12">

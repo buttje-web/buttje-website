@@ -2,42 +2,59 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import {
+  CONSENT_ACCEPT_ALL,
+  CONSENT_REJECT_ALL,
+  CONSENT_OPEN_EVENT,
+  hasDecision,
+  setConsent,
+} from '../lib/consent';
 
 export default function CookieConsent() {
-  const [showConsent, setShowConsent] = useState(false);
+  const [show, setShow] = useState(false);
 
   useEffect(() => {
-    // Check if user has already consented
-    const hasConsented = localStorage.getItem('cookieConsent');
-    if (!hasConsented) {
-      setShowConsent(true);
-    }
+    if (!hasDecision()) setShow(true);
+    const open = () => setShow(true);
+    window.addEventListener(CONSENT_OPEN_EVENT, open);
+    return () => window.removeEventListener(CONSENT_OPEN_EVENT, open);
   }, []);
 
-  const acceptCookies = () => {
-    localStorage.setItem('cookieConsent', 'true');
-    setShowConsent(false);
+  const acceptAll = () => {
+    setConsent(CONSENT_ACCEPT_ALL());
+    setShow(false);
   };
 
-  if (!showConsent) return null;
+  const rejectAll = () => {
+    setConsent(CONSENT_REJECT_ALL());
+    setShow(false);
+  };
+
+  if (!show) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-white shadow-lg z-50 border-t border-gray-200">
+    <div className="fixed bottom-0 left-0 right-0 z-[60] bg-white border-t border-gray-200 shadow-[0_-4px_20px_rgba(0,0,0,0.08)]">
       <div className="container-custom py-4">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="text-sm text-gray-700">
-            <p>
-              Diese Website verwendet Cookies und ähnliche Technologien, um Ihnen die bestmögliche Nutzung zu ermöglichen.
-              Einige sind notwendig, während andere optional sind.{' '}
-              <Link href="/datenschutz" className="text-[var(--primary)] hover:text-[var(--primary-dark)] underline">
-                Mehr erfahren
-              </Link>
-            </p>
-          </div>
-          <div className="flex gap-4">
+        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
+          <p className="text-sm text-gray-700 max-w-3xl">
+            Wir verwenden Cookies und ähnliche Technologien. Notwendige sind für den Betrieb der Website
+            erforderlich. Optionale Dienste (z. B. Statistik, Marketing und Google Maps) werden nur mit Ihrer
+            Zustimmung geladen. Mehr dazu in der{' '}
+            <Link href="/datenschutz" className="text-[var(--primary)] underline hover:text-[var(--primary-dark)]">
+              Datenschutzerklärung
+            </Link>
+            .
+          </p>
+          <div className="flex gap-3 shrink-0">
             <button
-              onClick={acceptCookies}
-              className="bg-[var(--primary)] text-white px-6 py-2 rounded-lg hover:bg-[var(--primary-dark)] transition-colors text-sm font-semibold whitespace-nowrap"
+              onClick={rejectAll}
+              className="px-6 py-2.5 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-50 transition-colors text-sm font-semibold whitespace-nowrap"
+            >
+              Nur notwendige
+            </button>
+            <button
+              onClick={acceptAll}
+              className="px-6 py-2.5 rounded-lg bg-[var(--primary)] text-white hover:bg-[var(--primary-dark)] transition-colors text-sm font-semibold whitespace-nowrap"
             >
               Alle akzeptieren
             </button>
@@ -46,4 +63,4 @@ export default function CookieConsent() {
       </div>
     </div>
   );
-} 
+}

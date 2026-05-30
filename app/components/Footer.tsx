@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Logo from './Logo';
 import {
   PHONE_MOBILE,
   PHONE_MOBILE_DISPLAY,
@@ -10,11 +11,16 @@ import {
   telHref,
 } from '../lib/contact';
 import { trackPhoneCall, trackEmailClick } from '../utils/gtag';
+import { openConsentSettings } from '../lib/consent';
 
 export default function Footer() {
   return (
     <footer className="bg-gray-50 border-t">
       <div className="container-custom py-12">
+        <div className="mb-10">
+          <Logo className="text-2xl text-gray-900" />
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="font-bold text-lg mb-4 text-[var(--primary)]">Kontakt</h3>
@@ -68,18 +74,23 @@ export default function Footer() {
             <h3 className="font-bold text-lg mb-4 text-[var(--primary)]">Informationen</h3>
             <div className="flex flex-col gap-2">
               <Link href="/ueber-uns" className="text-[var(--primary)] hover:text-[var(--primary-dark)]">Über uns</Link>
-              <Link href="/#dienstleistungen" className="text-[var(--primary)] hover:text-[var(--primary-dark)]">Dienstleistungen</Link>
-              <Link href="/#referenzen" className="text-[var(--primary)] hover:text-[var(--primary-dark)]">Referenzen</Link>
+              <Link href="/#leistungen" className="text-[var(--primary)] hover:text-[var(--primary-dark)]">Leistungen</Link>
               <Link href="/#kontakt" className="text-[var(--primary)] hover:text-[var(--primary-dark)]">Kontakt</Link>
             </div>
           </div>
 
           <div>
             <h3 className="font-bold text-lg mb-4 text-[var(--primary)]">Rechtliches</h3>
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2 items-start">
               <Link href="/impressum" className="text-[var(--primary)] hover:text-[var(--primary-dark)]">Impressum</Link>
               <Link href="/datenschutz" className="text-[var(--primary)] hover:text-[var(--primary-dark)]">Datenschutz</Link>
               <Link href="/agb" className="text-[var(--primary)] hover:text-[var(--primary-dark)]">AGB</Link>
+              <button
+                onClick={openConsentSettings}
+                className="text-[var(--primary)] hover:text-[var(--primary-dark)] text-left"
+              >
+                Cookie-Einstellungen
+              </button>
             </div>
           </div>
         </div>

@@ -110,13 +110,13 @@ export default function GewerblicheReinigung() {
                 href="tel:+4367762080802"
                 className="btn-primary"
               >
-                Jetzt Termin vereinbaren (Mobil)
+                Jetzt anfragen (Mobil)
               </a>
               <a
                 href="tel:+4312366326442"
                 className="btn-primary"
               >
-                Jetzt Termin vereinbaren (Büro)
+                Jetzt anfragen (Büro)
               </a>
               <Link
                 href="/#kontakt"

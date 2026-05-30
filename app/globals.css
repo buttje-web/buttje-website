@@ -38,6 +38,12 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Logo-Wortmarke */
+.logo-wordmark {
+  font-weight: 800;
+  letter-spacing: -0.045em;
+}
+
 /* Container */
 @layer components {
   .container-custom {

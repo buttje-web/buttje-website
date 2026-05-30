@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Script from "next/script";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import MobileCallBar from "./components/MobileCallBar";
 import CookieConsent from "./components/CookieConsent";
+import ConsentScripts from "./components/ConsentScripts";
 import {
   SITE_URL,
   PHONE_MOBILE,
@@ -153,19 +153,6 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        {/* Google tag (gtag.js) */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-17533089249"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-17533089249');
-          `}
-        </Script>
       </head>
       <body className="antialiased min-h-screen flex flex-col">
         <Header />
@@ -173,6 +160,8 @@ export default function RootLayout({
         <Footer />
         <MobileCallBar />
         <CookieConsent />
+        {/* Analytics/Ads werden erst nach Zustimmung geladen */}
+        <ConsentScripts />
       </body>
     </html>
   );

@@ -21,19 +21,19 @@ const services = [
     title: 'Gewerbliche Reinigung',
     description: 'Maßgeschneiderte Lösungen für Büros, Kanzleien, Praxen und gehobene Geschäftsräume.',
     image: '/assets/mob_compressed.jpg',
-    link: '/dienstleistungen/gewerbliche-reinigung',
+    link: '/leistungen/gewerbliche-reinigung',
   },
   {
     title: 'Umzüge & Endreinigungen',
     description: 'Perfekte Sauberkeit für Mieter, Eigentümer und Immobilienverwaltungen.',
     image: '/assets/moving_compressed.jpg',
-    link: '/dienstleistungen/umzugs-und-endreinigung',
+    link: '/leistungen/umzuege-und-endreinigungen',
   },
   {
     title: 'Facility Services',
     description: 'Hausmeisterdienste, Pflege von Außenanlagen und Sonderreinigungen.',
     image: '/assets/team_compressed.jpg',
-    link: '/dienstleistungen/facility-services',
+    link: '/leistungen/facility-services',
   },
 ];
 
@@ -118,12 +118,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Dienstleistungen */}
-      <section className="py-24 bg-white" aria-label="Dienstleistungen">
+      {/* Leistungen */}
+      <section className="py-24 bg-white" aria-label="Leistungen">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900" id="dienstleistungen">
-              Unsere Dienstleistungen
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900" id="leistungen">
+              Unsere Leistungen
             </h2>
             <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
               Mehr als Standard-Reinigung, abgestimmt auf Ihr Objekt und Ihre Branche.
@@ -188,10 +188,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Diskretion / Referenzen */}
+      {/* Diskretion */}
       <section className="py-24 bg-gray-50" aria-label="Diskretion">
         <div className="container-custom">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900" id="referenzen">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900" id="diskretion">
             Diskretion, Vertrauen durch Verschwiegenheit
           </h2>
           <div className="max-w-3xl mx-auto bg-white rounded-xl border border-gray-100 shadow-sm p-8 md:p-10 space-y-8 slide-in-left animate-delay-1">

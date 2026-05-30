@@ -111,13 +111,13 @@ export default function FacilityServices() {
                 href="tel:+4367762080802"
                 className="btn-primary"
               >
-                Jetzt Beratung anfordern (Mobil)
+                Jetzt anfragen (Mobil)
               </a>
               <a
                 href="tel:+4312366326442"
                 className="btn-primary"
               >
-                Jetzt Beratung anfordern (Büro)
+                Jetzt anfragen (Büro)
               </a>
               <Link
                 href="/#kontakt"

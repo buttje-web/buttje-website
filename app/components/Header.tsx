@@ -8,8 +8,7 @@ import { PHONE_MOBILE, telHref } from '../lib/contact';
 import { trackPhoneCall } from '../utils/gtag';
 
 const navLinks = [
-  { href: '/#dienstleistungen', label: 'Dienstleistungen' },
-  { href: '/#referenzen', label: 'Referenzen' },
+  { href: '/#leistungen', label: 'Leistungen' },
   { href: '/ueber-uns', label: 'Über uns' },
   { href: '/#kontakt', label: 'Kontakt' },
 ];
@@ -21,16 +20,8 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur shadow-sm">
       <nav className="container-custom">
         <div className="flex justify-between items-center h-16">
-          <Link href="/" className="text-xl font-bold" onClick={() => setIsOpen(false)}>
-            <div className="flex items-start gap-2">
-              <Logo className="text-[var(--primary)] w-8 h-8" />
-              <div className="flex flex-col items-start -mt-1">
-                <span className="text-gray-900 translate-y-1 leading-none">buttje</span>
-                <span className="text-[8.5px] text-gray-500 -tracking-wider mt-0.5 italic">
-                  So muk wi dat
-                </span>
-              </div>
-            </div>
+          <Link href="/" aria-label="buttje, Startseite" onClick={() => setIsOpen(false)}>
+            <Logo className="text-2xl text-gray-900" />
           </Link>
 
           {/* Desktop Navigation */}

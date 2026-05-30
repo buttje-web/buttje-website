@@ -52,7 +52,9 @@ export default function DatenschutzPage() {
           <h2>5. Nutzung von Tracking- und Analysetools</h2>
           <p>
             Wir verwenden auf unserer Webseite Tracking- und Analysetools, um die Nutzung unserer Webseite zu analysieren
-            und unsere Marketingmaßnahmen zu verbessern.
+            und unsere Marketingmaßnahmen zu verbessern. Diese Dienste werden erst geladen, nachdem Sie über unseren
+            Cookie-Banner aktiv zugestimmt haben (Art. 6 Abs. 1 lit. a DSGVO). Ohne Ihre Zustimmung werden keine
+            Statistik- oder Marketing-Cookies gesetzt.
           </p>
 
           <h3>5.1 Google Analytics</h3>
@@ -69,18 +71,7 @@ export default function DatenschutzPage() {
             <a href="https://tools.google.com/dlpage/gaoptout?hl=de">Google Analytics Opt-Out</a>
           </p>
 
-          <h3>5.2 Facebook Pixel</h3>
-          <p>
-            Diese Webseite verwendet das &quot;Facebook Pixel&quot; der Meta Platforms Ireland Limited. Dies ermöglicht es uns,
-            die Besucher unserer Webseite gezielt mit Werbung auf Facebook anzusprechen. Die durch Facebook erfassten
-            Daten bleiben für uns anonym, ermöglichen jedoch Facebook, Nutzungsprofile zu erstellen.
-          </p>
-          <p>
-            Weitere Informationen zur Datenverarbeitung durch Facebook finden Sie hier:<br />
-            <a href="https://www.facebook.com/about/privacy/">Facebook Datenschutzerklärung</a>
-          </p>
-
-          <h3>5.3 Google Ads Conversion-Tracking</h3>
+          <h3>5.2 Google Ads Conversion-Tracking</h3>
           <p>
             Wir nutzen Google Ads Conversion-Tracking, um den Erfolg unserer Werbeanzeigen zu messen.
             Wenn Sie über eine Google-Anzeige auf unsere Webseite gelangen, wird ein Cookie auf Ihrem Gerät gespeichert.
@@ -125,10 +116,17 @@ export default function DatenschutzPage() {
             Zur Ausübung dieser Rechte kontaktieren Sie uns unter: info@buttje.at
           </p>
 
-          <h2>9. Cookies und Tracking-Technologien</h2>
+          <h2>9. Cookies und Einwilligung (Cookie-Banner)</h2>
           <p>
-            Unsere Webseite verwendet Cookies, um eine optimale Nutzung der Seite zu ermöglichen. Sie können die Speicherung
-            von Cookies in Ihrem Browser deaktivieren oder einzelne Cookies gezielt löschen.
+            Beim ersten Besuch unserer Webseite werden Sie über einen Cookie-Banner um Ihre Einwilligung gebeten.
+            Notwendige Cookies, die für den Betrieb der Seite erforderlich sind, werden immer gesetzt. Optionale
+            Dienste (Google Analytics, Google Ads Conversion-Tracking sowie die Einbindung von Google Maps auf der
+            Kontaktseite) werden ausschließlich nach Ihrer aktiven Zustimmung geladen.
+          </p>
+          <p>
+            Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen oder anpassen, indem Sie im
+            Footer den Link &quot;Cookie-Einstellungen&quot; aufrufen. Zusätzlich können Sie Cookies in Ihrem Browser
+            jederzeit löschen oder deren Speicherung einschränken.
           </p>
 
           <h2>10. Beschwerderecht</h2>
@@ -149,7 +147,7 @@ export default function DatenschutzPage() {
           </p>
 
           <p className="mt-8 text-sm">
-            Stand: Februar 2025
+            Stand: Mai 2026
           </p>
         </section>
       </div>
