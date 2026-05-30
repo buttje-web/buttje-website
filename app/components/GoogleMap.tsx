@@ -3,12 +3,14 @@
 import { useState } from 'react';
 import { useConsent } from '../lib/consent';
 
-// Einbettung ueber feste Koordinaten (lat/lng) statt Place-ID, damit Google
-// keinen abweichenden eigenen Adress-Eintrag in der Info-Card anzeigt.
+// Einbettung ueber feste Koordinaten (lat/lng) des Gebaeudes Graben 28 statt
+// Place-ID. Mit der (Label)-Syntax setzen wir einen eigenen Marker-Titel, sodass
+// Google keinen abweichenden eigenen Adress-Eintrag in der Info-Card anzeigt.
 // So bleibt die Beschriftung eindeutig "Graben 28/1/12, 1010 Wien".
-const LAT = 48.2083075;
-const LNG = 16.3709481;
-const MAP_SRC = `https://maps.google.com/maps?q=${LAT},${LNG}&z=16&hl=de&output=embed`;
+const LAT = 48.20873;
+const LNG = 16.37002;
+const MARKER_LABEL = 'buttje, Graben 28/1/12, 1010 Wien';
+const MAP_SRC = `https://maps.google.com/maps?q=${LAT},${LNG}(${encodeURIComponent(MARKER_LABEL)})&z=17&hl=de&output=embed`;
 const MAP_LINK = `https://www.google.com/maps/search/?api=1&query=${LAT}%2C${LNG}`;
 
 export default function GoogleMap() {
