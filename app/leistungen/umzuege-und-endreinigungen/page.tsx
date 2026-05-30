@@ -128,7 +128,7 @@ export default function UmzuegeUndEndreinigungen() {
             {kacheln.map((service, index) => (
               <article
                 key={service.title}
-                className={`p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow ${index % 2 === 0 ? 'slide-in-left' : 'slide-in-right'} animate-delay-${index + 1}`}
+                className={`p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow text-center ${index % 2 === 0 ? 'slide-in-left' : 'slide-in-right'} animate-delay-${index + 1}`}
                 role="listitem"
               >
                 <h3 className="text-xl font-semibold mb-3 text-[var(--primary)]">{service.title}</h3>
