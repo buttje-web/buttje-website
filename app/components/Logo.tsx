@@ -1,17 +1,21 @@
+import Image from 'next/image';
+
 interface LogoProps {
+  /** 'dark' = schwarzes Logo auf hellem Hintergrund (Standard)
+   *  'light' = invertiert via CSS-Filter fuer dunkle/tuerkise Hintergründe */
+  variant?: 'dark' | 'light';
   className?: string;
 }
 
-// Reine Wortmarke "buttje" mit kleinem hochgestelltem ®, in Inter.
-// Farbe wird ueber currentColor gesteuert (className), damit das Logo auf hellem
-// wie dunklem/tuerkisem Untergrund lesbar bleibt.
-export default function Logo({ className = '' }: LogoProps) {
+export default function Logo({ variant = 'dark', className = '' }: LogoProps) {
   return (
-    <span className={`logo-wordmark inline-flex items-start leading-none ${className}`}>
-      <span>buttje</span>
-      <span className="ml-[0.08em] mt-[0.12em] text-[0.42em] font-semibold tracking-normal align-top">
-        ®
-      </span>
-    </span>
+    <Image
+      src="/buttje_logo_schwarz.png"
+      alt="buttje Gebäudereinigung Wien"
+      width={108}
+      height={40}
+      className={`h-9 w-auto object-contain${variant === 'light' ? ' brightness-0 invert' : ''}${className ? ` ${className}` : ''}`}
+      priority
+    />
   );
 }

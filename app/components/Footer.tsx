@@ -18,7 +18,9 @@ export default function Footer() {
     <footer className="bg-gray-50 border-t">
       <div className="container-custom py-12">
         <div className="mb-10">
-          <Logo className="text-2xl text-gray-900" />
+          <Link href="/" aria-label="buttje, Startseite">
+            <Logo />
+          </Link>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

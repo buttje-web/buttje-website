@@ -21,7 +21,7 @@ export default function Header() {
       <nav className="container-custom">
         <div className="flex justify-between items-center h-16">
           <Link href="/" aria-label="buttje, Startseite" onClick={() => setIsOpen(false)}>
-            <Logo className="text-2xl text-gray-900" />
+            <Logo />
           </Link>
 
           {/* Desktop Navigation */}
