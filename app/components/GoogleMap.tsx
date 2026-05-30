@@ -3,8 +3,13 @@
 import { useState } from 'react';
 import { useConsent } from '../lib/consent';
 
-const MAP_SRC =
-  'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2659.0243075563837!2d16.37094807638775!3d48.20830747912648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476d079e7d7dd1ab%3A0x3a40a1f0d6b89c48!2sGraben+28%2F1%2F12%2C+1010+Wien!5e0!3m2!1sde!2sat!4v1710861445040!5m2!1sde!2sat';
+// Einbettung ueber feste Koordinaten (lat/lng) statt Place-ID, damit Google
+// keinen abweichenden eigenen Adress-Eintrag in der Info-Card anzeigt.
+// So bleibt die Beschriftung eindeutig "Graben 28/1/12, 1010 Wien".
+const LAT = 48.2083075;
+const LNG = 16.3709481;
+const MAP_SRC = `https://maps.google.com/maps?q=${LAT},${LNG}&z=16&hl=de&output=embed`;
+const MAP_LINK = `https://www.google.com/maps/search/?api=1&query=${LAT}%2C${LNG}`;
 
 export default function GoogleMap() {
   const consent = useConsent();
@@ -46,7 +51,7 @@ export default function GoogleMap() {
         title="buttje Standort, Graben 28/1/12, 1010 Wien"
       />
       <a
-        href="https://www.google.com/maps/place/Graben+28%2F1%2F12,+1010+Wien/@48.2083075,16.3709481,17z/"
+        href={MAP_LINK}
         target="_blank"
         rel="noopener noreferrer"
         className="absolute inset-0 z-10"
