@@ -15,7 +15,7 @@ export default function DatenschutzPage() {
           <h2>1. Verantwortliche Stelle</h2>
           <p>
             Verantwortlich für die Datenverarbeitung ist:<br />
-            Buttje e.U.<br />
+            buttje e.U.<br />
             Inhaber: Rami Ibraimi<br />
             Graben 28/1/12, 1010 Wien<br />
             +43 677 62080802<br />

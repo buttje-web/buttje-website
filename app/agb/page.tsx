@@ -9,7 +9,7 @@ export default function AGBPage() {
   return (
     <div className="py-20 bg-white">
       <div className="container-custom">
-        <h1 className="text-4xl font-bold mb-12 text-gray-900">Allgemeine Geschäftsbedingungen (AGB) der Buttje e.U.</h1>
+        <h1 className="text-4xl font-bold mb-12 text-gray-900">Allgemeine Geschäftsbedingungen (AGB) der buttje e.U.</h1>
         
         <div className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-800 prose-li:text-gray-800">
           <p className="text-lg text-gray-600 mb-12">
@@ -20,7 +20,7 @@ export default function AGBPage() {
             <section>
               <h2>1. Geltungsbereich</h2>
               <div className="space-y-4">
-                <p>Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Dienstleistungen der Buttje e.U. mit Sitz in Wien. Sie regeln die vertraglichen Beziehungen zwischen Buttje e.U. und dem Auftraggeber.</p>
+                <p>Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Dienstleistungen der buttje e.U. mit Sitz in Wien. Sie regeln die vertraglichen Beziehungen zwischen buttje e.U. und dem Auftraggeber.</p>
               </div>
             </section>
 
@@ -34,7 +34,7 @@ export default function AGBPage() {
             <section>
               <h2>3. Leistungsbeschreibung & Durchführung</h2>
               <div className="space-y-4">
-                <p>Buttje e.U. erbringt professionelle Gebäudereinigungsdienstleistungen gemäß dem individuell vereinbarten Vertrag. Dies umfasst unter anderem:</p>
+                <p>buttje e.U. erbringt professionelle Gebäudereinigungsdienstleistungen gemäß dem individuell vereinbarten Vertrag. Dies umfasst unter anderem:</p>
                 <ul>
                   <li>Unterhaltsreinigung von Büro- und Geschäftsräumen</li>
                   <li>Fenster- und Glasreinigung</li>
@@ -47,7 +47,7 @@ export default function AGBPage() {
             <section>
               <h2>4. Schlüsselübergabe & Sicherheit</h2>
               <div className="space-y-4">
-                <p>Schlüsselübergaben werden durch ein Protokoll dokumentiert. Der Verlust eines Schlüssels durch Buttje e.U. wird durch eine Firmenversicherung abgedeckt.</p>
+                <p>Schlüsselübergaben werden durch ein Protokoll dokumentiert. Der Verlust eines Schlüssels durch buttje e.U. wird durch eine Firmenversicherung abgedeckt.</p>
               </div>
             </section>
 
