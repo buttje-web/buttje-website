@@ -13,6 +13,7 @@ import {
   PHONE_OFFICE,
   EMAIL,
   ADDRESS,
+  DISTRICTS,
 } from "./lib/contact";
 
 // Einzige Hausschrift: Inter, selbst gehostet ueber next/font (kein externer
@@ -25,12 +26,11 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: {
-    default: "buttje | Premium Gebäudereinigung Wien",
-    template: "%s | buttje Gebäudereinigung Wien",
-  },
+  // Kein Template: jede Seite setzt ihren vollstaendigen Title selbst.
+  // Die Startseite nutzt diesen Default.
+  title: "Gebäudereinigung Wien für Unternehmen | buttje",
   description:
-    "Professionelle Reinigung für Unternehmen jeder Größe. Büro, Kanzlei, Ordination, Hotel oder Hausverwaltung, makellos und diskret. Jetzt anrufen oder Angebot anfordern.",
+    "Professionelle Gebäudereinigung für Unternehmen in den inneren Bezirken Wiens. Feste Teams, diskret, versichert. Jetzt unverbindlich anfragen.",
   keywords: [
     "Gebäudereinigung Wien",
     "Büroreinigung Wien",
@@ -40,14 +40,13 @@ export const metadata: Metadata = {
     "Unterhaltsreinigung",
     "Facility Services Wien",
     "Endreinigung Wien",
-    "Premium Reinigung",
   ],
   authors: [{ name: "buttje e.U." }],
   alternates: { canonical: "/" },
   openGraph: {
-    title: "buttje | Premium Gebäudereinigung Wien",
+    title: "Gebäudereinigung Wien für Unternehmen | buttje",
     description:
-      "Professionelle Reinigung für Unternehmen jeder Größe. Büro, Kanzlei, Ordination, Hotel oder Hausverwaltung, makellos und diskret.",
+      "Professionelle Gebäudereinigung für Unternehmen in den inneren Bezirken Wiens. Feste Teams, diskret, versichert. Jetzt unverbindlich anfragen.",
     url: SITE_URL,
     siteName: "buttje",
     locale: "de_AT",
@@ -55,9 +54,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "buttje | Premium Gebäudereinigung Wien",
+    title: "Gebäudereinigung Wien für Unternehmen | buttje",
     description:
-      "Professionelle Reinigung für Unternehmen jeder Größe. Büro, Kanzlei, Ordination, Hotel oder Hausverwaltung, makellos und diskret.",
+      "Professionelle Gebäudereinigung für Unternehmen in den inneren Bezirken Wiens. Feste Teams, diskret, versichert. Jetzt unverbindlich anfragen.",
   },
   icons: {
     icon: [
@@ -89,7 +88,7 @@ const jsonLd = {
     "Premium Gebäudereinigung in Wien für Unternehmen: Büro- und Kanzleireinigung, Ordinations- und Praxisreinigung, Gebäude- und Unterhaltsreinigung, Facility Services sowie Umzugs- und Endreinigung.",
   url: SITE_URL,
   image: `${SITE_URL}/opengraph-image`,
-  telephone: PHONE_MOBILE,
+  telephone: PHONE_OFFICE,
   email: EMAIL,
   priceRange: "€€€",
   currenciesAccepted: "EUR",
@@ -102,10 +101,14 @@ const jsonLd = {
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: 48.2083,
-    longitude: 16.3709,
+    latitude: 48.20873,
+    longitude: 16.37002,
   },
-  areaServed: { "@type": "City", name: "Wien" },
+  areaServed: DISTRICTS.map((plz) => ({
+    "@type": "PostalCodeSpecification",
+    postalCode: plz,
+    addressCountry: "AT",
+  })),
   contactPoint: [
     {
       "@type": "ContactPoint",
@@ -148,7 +151,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="de" className={inter.variable}>
+    <html lang="de-AT" className={inter.variable}>
       <head>
         <script
           type="application/ld+json"

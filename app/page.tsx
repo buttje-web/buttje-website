@@ -45,6 +45,49 @@ const trust = [
   { title: 'Versichert', text: 'Betrieblich versichert, inklusive dokumentiertem Schlüsselmanagement.' },
 ];
 
+const faqs = [
+  {
+    question: 'Was kostet eine Reinigung bei buttje?',
+    answer:
+      'Das hängt von Ihrem Objekt ab, von Größe, Reinigungsintervall und Anforderungen. Wir nennen keine Pauschalpreise von der Stange. Stattdessen vereinbaren wir eine Begehung vor Ort und erstellen danach ein individuelles, unverbindliches Angebot.',
+  },
+  {
+    question: 'Wie schnell ist ein Termin möglich?',
+    answer:
+      'Für die erste Begehung melden wir uns kurzfristig. Den genauen Reinigungsbeginn stimmen wir auf Ihren Betrieb ab, viele Kunden starten innerhalb weniger Tage nach dem Angebot.',
+  },
+  {
+    question: 'Arbeitet immer dasselbe Team bei mir?',
+    answer:
+      'Ja. buttje arbeitet mit festen Teams und einem festen Ansprechpartner. Kein wechselndes Personal, das jedes Mal neu eingewiesen werden muss. Das ist die Grundlage für Vertrauen und gleichbleibende Qualität.',
+  },
+  {
+    question: 'Sind Sie versichert und konzessioniert?',
+    answer:
+      'Ja. buttje ist ein konzessioniertes Reinigungsgewerbe in Wien, fachlich befugt und geprüft, und betrieblich versichert, inklusive dokumentiertem Schlüsselmanagement.',
+  },
+  {
+    question: 'In welchen Bezirken sind Sie tätig?',
+    answer:
+      'Wir arbeiten in den inneren Bezirken Wiens, vom 1. Bezirk über Landstraße, Wieden, Margareten, Mariahilf, Neubau und Josefstadt bis Alsergrund.',
+  },
+  {
+    question: 'Wie läuft die erste Anfrage ab?',
+    answer:
+      'Sie schildern uns kurz Ihr Objekt, telefonisch, per WhatsApp oder über das Formular. Wir vereinbaren eine Begehung vor Ort und erstellen danach ein unverbindliches Angebot. Erst wenn das passt, geht es los.',
+  },
+];
+
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+  })),
+};
+
 export default function Home() {
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -122,12 +165,15 @@ export default function Home() {
       {/* Leistungen */}
       <section className="py-24 bg-white" aria-label="Leistungen">
         <div className="container-custom">
-          <div className="text-center mb-16">
+          <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900" id="leistungen">
               Unsere Leistungen
             </h2>
-            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-              Mehr als Standard-Reinigung, abgestimmt auf Ihr Objekt und Ihre Branche.
+            <p className="text-lg text-gray-600">
+              buttje übernimmt die professionelle Gebäudereinigung für Unternehmen in den inneren Bezirken Wiens,
+              vom 1. Bezirk bis Alsergrund, Mariahilf und Margareten. Ob Büroreinigung, Unterhaltsreinigung oder
+              Sonderreinigung: Sie bekommen feste Teams, einen festen Ansprechpartner und gleichbleibende Qualität.
+              Kein wechselndes Personal, keine Überraschungen.
             </p>
           </div>
 
@@ -245,8 +291,32 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Haeufige Fragen */}
+      <section className="py-24 bg-gray-50 border-t border-gray-100" aria-label="Häufige Fragen">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+        />
+        <div className="container-custom">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">Häufige Fragen</h2>
+          <div className="max-w-3xl mx-auto divide-y divide-gray-200 border-y border-gray-200">
+            {faqs.map((faq) => (
+              <details key={faq.question} className="group py-5">
+                <summary className="flex cursor-pointer items-center justify-between gap-4 text-lg font-semibold text-gray-900 list-none">
+                  {faq.question}
+                  <svg className="h-5 w-5 flex-shrink-0 text-[var(--primary)] transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <p className="mt-3 text-gray-700 leading-relaxed">{faq.answer}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Kontakt */}
-      <section id="kontakt" className="py-24 bg-gray-50" aria-label="Kontakt">
+      <section id="kontakt" className="py-24 bg-white" aria-label="Kontakt">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
             <div>

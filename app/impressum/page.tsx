@@ -1,3 +1,10 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Impressum | buttje',
+  robots: { index: false },
+};
+
 export default function ImpressumPage() {
   return (
     <div className="py-20 bg-white">

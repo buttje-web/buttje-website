@@ -20,7 +20,10 @@ export const ADDRESS = {
   country: "AT",
 };
 
-export const SITE_URL = "https://www.buttje.at";
+export const SITE_URL = "https://buttje.at";
+
+// Innere Wiener Bezirke (geografischer Fokus), Schwerpunkt 1010.
+export const DISTRICTS = ["1010", "1030", "1040", "1050", "1060", "1070", "1080", "1090"];
 
 // Tel-href Helfer, garantiert sauber: nur Ziffern und führendes Plus.
 export const telHref = (e164: string) => `tel:${e164.replace(/[^+\d]/g, "")}`;

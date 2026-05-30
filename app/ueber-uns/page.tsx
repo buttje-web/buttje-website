@@ -4,10 +4,17 @@ import Link from 'next/link';
 import CallButton from '../components/CallButton';
 
 export const metadata: Metadata = {
-  title: 'Über uns',
+  title: 'Über uns | buttje Gebäudereinigung Wien',
   description:
-    'buttje steht für Premium Gebäudereinigung in Wien: norddeutsche Gründlichkeit, höchster Anspruch und gelebte Diskretion. Lernen Sie unsere Haltung kennen.',
+    'buttje steht für Qualität ohne Mittelmaß. Diskrete Gebäudereinigung mit festen Teams für Kanzleien, Praxen und Büros in Wien.',
   alternates: { canonical: '/ueber-uns' },
+  openGraph: {
+    title: 'Über uns | buttje Gebäudereinigung Wien',
+    description:
+      'buttje steht für Qualität ohne Mittelmaß. Diskrete Gebäudereinigung mit festen Teams für Kanzleien, Praxen und Büros in Wien.',
+    url: 'https://buttje.at/ueber-uns',
+    type: 'website',
+  },
 };
 
 export default function UeberUnsPage() {
@@ -46,7 +53,7 @@ export default function UeberUnsPage() {
             </div>
 
             <div className="h-[55vh] min-h-[420px] relative rounded-xl overflow-hidden">
-              <Image src="/assets/team_compressed.jpg" alt="Das Team von buttje" fill className="object-cover" priority />
+              <Image src="/assets/team_compressed.jpg" alt="Das Team von buttje bei der Gebäudereinigung in Wien" fill className="object-cover" priority />
             </div>
 
             <div>

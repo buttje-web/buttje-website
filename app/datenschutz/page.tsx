@@ -1,3 +1,10 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Datenschutz | buttje',
+  robots: { index: false },
+};
+
 export default function DatenschutzPage() {
   return (
     <div className="py-20 bg-white">
