@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import MobileCallBar from "./components/MobileCallBar";
+import FloatingWhatsApp from "./components/FloatingWhatsApp";
 import CookieConsent from "./components/CookieConsent";
 import ConsentScripts from "./components/ConsentScripts";
 import {
@@ -159,6 +160,7 @@ export default function RootLayout({
         <main className="flex-grow">{children}</main>
         <Footer />
         <MobileCallBar />
+        <FloatingWhatsApp />
         <CookieConsent />
         {/* Analytics/Ads werden erst nach Zustimmung geladen */}
         <ConsentScripts />

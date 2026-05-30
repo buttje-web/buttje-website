@@ -4,6 +4,7 @@ import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import CallButton from './components/CallButton';
+import WhatsAppButton from './components/WhatsAppButton';
 import InquiryForm from './components/InquiryForm';
 import GoogleMap from './components/GoogleMap';
 import PhoneIcon from './components/PhoneIcon';
@@ -275,8 +276,9 @@ export default function Home() {
                   </dd>
                 </div>
               </dl>
-              <div className="mt-9">
+              <div className="mt-9 flex flex-col sm:flex-row gap-3">
                 <CallButton location="kontakt_section" />
+                <WhatsAppButton />
               </div>
             </div>
             <GoogleMap />

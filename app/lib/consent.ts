@@ -49,6 +49,28 @@ export function openConsentSettings(): void {
   window.dispatchEvent(new Event(CONSENT_OPEN_EVENT));
 }
 
+// Hook: ist der Cookie-Banner aktuell sichtbar? (offen bei fehlender Entscheidung
+// oder nach erneutem Oeffnen, geschlossen nach einer Entscheidung).
+// Wird von Banner und schwebendem WhatsApp-Button genutzt, damit sie sich nicht
+// ueberlappen.
+export function useConsentBannerVisible(): boolean {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    setVisible(!hasDecision());
+    const open = () => setVisible(true);
+    const close = () => setVisible(false);
+    window.addEventListener(CONSENT_OPEN_EVENT, open);
+    window.addEventListener(CONSENT_CHANGE_EVENT, close);
+    return () => {
+      window.removeEventListener(CONSENT_OPEN_EVENT, open);
+      window.removeEventListener(CONSENT_CHANGE_EVENT, close);
+    };
+  }, []);
+
+  return visible;
+}
+
 // Hook: liefert den aktuellen Consent und aktualisiert sich bei Aenderungen.
 export function useConsent(): Consent | null {
   const [consent, setConsentState] = useState<Consent | null>(null);

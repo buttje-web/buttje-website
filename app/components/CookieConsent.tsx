@@ -1,34 +1,18 @@
 'use client';
 
-import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import {
   CONSENT_ACCEPT_ALL,
   CONSENT_REJECT_ALL,
-  CONSENT_OPEN_EVENT,
-  hasDecision,
   setConsent,
+  useConsentBannerVisible,
 } from '../lib/consent';
 
 export default function CookieConsent() {
-  const [show, setShow] = useState(false);
+  const show = useConsentBannerVisible();
 
-  useEffect(() => {
-    if (!hasDecision()) setShow(true);
-    const open = () => setShow(true);
-    window.addEventListener(CONSENT_OPEN_EVENT, open);
-    return () => window.removeEventListener(CONSENT_OPEN_EVENT, open);
-  }, []);
-
-  const acceptAll = () => {
-    setConsent(CONSENT_ACCEPT_ALL());
-    setShow(false);
-  };
-
-  const rejectAll = () => {
-    setConsent(CONSENT_REJECT_ALL());
-    setShow(false);
-  };
+  const acceptAll = () => setConsent(CONSENT_ACCEPT_ALL());
+  const rejectAll = () => setConsent(CONSENT_REJECT_ALL());
 
   if (!show) return null;
 

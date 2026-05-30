@@ -9,6 +9,10 @@ export const PHONE_OFFICE_DISPLAY = "+43 1 236 632 64 42";
 
 export const EMAIL = "info@buttje.at";
 
+// WhatsApp Business. Link oeffnet den Chat ohne vorausgefuellte Nachricht.
+export const WHATSAPP_NUMBER = "4367762080802";
+export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`;
+
 export const ADDRESS = {
   street: "Graben 28/1/12",
   postalCode: "1010",
