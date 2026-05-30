@@ -127,7 +127,7 @@ export default function FacilityServices() {
             {kacheln.map((service, index) => (
               <article
                 key={service.title}
-                className={`p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow ${index % 2 === 0 ? 'slide-in-left' : 'slide-in-right'} animate-delay-${index + 1}${index === kacheln.length - 1 && kacheln.length % 2 === 1 ? ' md:col-span-2 md:mx-auto md:w-[calc(50%-1rem)]' : ''}`}
+                className={`p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow ${index % 2 === 0 ? 'slide-in-left' : 'slide-in-right'} animate-delay-${index + 1}${index === kacheln.length - 1 && kacheln.length % 2 === 1 ? ' md:col-span-2 md:mx-auto md:w-[calc(50%-1rem)] md:text-center' : ''}`}
                 role="listitem"
               >
                 <h3 className="text-xl font-semibold mb-3 text-[var(--primary)]">{service.title}</h3>
