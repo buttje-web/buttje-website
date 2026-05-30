@@ -12,13 +12,11 @@
     "@googlemaps/js-api-loader": "^1.16.8",
     "@types/google.maps": "^3.58.1",
     "next": "15.1.11",
-    "nodemailer": "^6.9.16",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@types/nodemailer": "^6.4.17",
     "@tailwindcss/typography": "^0.5.16",
     "@types/node": "^20",
     "@types/react": "^19",

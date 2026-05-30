@@ -5,7 +5,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import CallButton from './components/CallButton';
 import WhatsAppButton from './components/WhatsAppButton';
-import InquiryForm from './components/InquiryForm';
 import GoogleMap from './components/GoogleMap';
 import PhoneIcon from './components/PhoneIcon';
 import { PhoneLink, EmailLink, ObfuscatedText } from './components/ObfuscatedContact';
@@ -271,23 +270,20 @@ export default function Home() {
       {/* Angebot anfordern */}
       <section id="angebot" className="py-24 bg-white" aria-label="Angebot anfordern">
         <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Angebot anfordern</h2>
-              <p className="mt-5 text-lg text-gray-600 leading-relaxed">
-                Schildern Sie uns kurz Ihr Objekt. Wir vereinbaren eine Begehung vor Ort und erstellen
-                danach ein unverbindliches Angebot. Lieber direkt sprechen? Rufen Sie uns an.
-              </p>
-              <div className="mt-7">
-                <CallButton location="angebot_section" />
-              </div>
-              <p className="mt-4 text-sm text-gray-500">
-                <ObfuscatedText kind="mobile" /> · <ObfuscatedText kind="email" />
-              </p>
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Angebot anfordern</h2>
+            <p className="mt-5 text-lg text-gray-600 leading-relaxed">
+              Schildern Sie uns kurz Ihr Objekt. Wir vereinbaren eine Begehung vor Ort und erstellen
+              danach ein unverbindliches Angebot. Am schnellsten erreichen Sie uns telefonisch oder
+              per WhatsApp.
+            </p>
+            <div className="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
+              <CallButton location="angebot_section" />
+              <WhatsAppButton />
             </div>
-            <div>
-              <InquiryForm />
-            </div>
+            <p className="mt-6 text-sm text-gray-500">
+              <ObfuscatedText kind="mobile" /> · <ObfuscatedText kind="email" />
+            </p>
           </div>
         </div>
       </section>
