@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import Logo from './Logo';
 import PhoneIcon from './PhoneIcon';
-import { PHONE_MOBILE, telHref } from '../lib/contact';
+import { PHONE_MOBILE, PHONE_MOBILE_DISPLAY, telHref } from '../lib/contact';
 import { trackPhoneCall } from '../utils/gtag';
 
 const navLinks = [
@@ -37,8 +37,15 @@ export default function Header() {
             ))}
           </div>
 
-          {/* Dauerhaft sichtbarer Anruf-Button */}
-          <div className="flex items-center gap-2">
+          {/* Dauerhaft sichtbarer Anruf-Button mit sichtbarer Nummer */}
+          <div className="flex items-center gap-3">
+            <a
+              href={telHref(PHONE_MOBILE)}
+              onClick={() => trackPhoneCall(PHONE_MOBILE, 'header_number')}
+              className="hidden lg:inline-block text-sm font-semibold text-gray-900 hover:text-[var(--primary)] transition-colors"
+            >
+              {PHONE_MOBILE_DISPLAY}
+            </a>
             <a
               href={telHref(PHONE_MOBILE)}
               onClick={() => trackPhoneCall(PHONE_MOBILE, 'header')}

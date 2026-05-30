@@ -38,6 +38,13 @@ const services = [
   },
 ];
 
+const trustFacts = [
+  'Im Firmenbuch eingetragen (FN 648848p)',
+  'Reglementiertes Gewerbe mit Befähigungsnachweis',
+  'Mitglied der Wirtschaftskammer Wien',
+  'Vollversichert',
+];
+
 const trust = [
   { title: 'Diskret', text: 'Geschultes Personal, das vertraulich arbeitet. Keine Weitergabe von Informationen.' },
   { title: 'Zuverlässig', text: 'Feste Ansprechpartner und verbindliche Termine, auf die Sie sich verlassen können.' },
@@ -47,34 +54,39 @@ const trust = [
 
 const faqs = [
   {
+    question: 'Ist buttje ein eingetragener und versicherter Reinigungsbetrieb?',
+    answer:
+      'Ja. buttje e.U. ist ein im Firmenbuch eingetragener, reglementierter Gebäudereinigungsbetrieb mit Befähigungsnachweis, Mitglied der Wirtschaftskammer Wien und vollversichert.',
+  },
+  {
+    question: 'Wie geht buttje mit sensiblen Bereichen wie Kanzleien oder Praxen um?',
+    answer:
+      'Mit geschultem, fest eingeteiltem Personal, dokumentierter Schlüsselübergabe und absoluter Verschwiegenheit. Diskretion ist bei buttje Grundlage, kein Zusatz.',
+  },
+  {
+    question: 'Wie läuft eine Anfrage bei buttje ab?',
+    answer:
+      'In drei Schritten. Sie senden eine Anfrage, buttje vereinbart eine kostenlose Begehung vor Ort, danach erhalten Sie ein unverbindliches Angebot.',
+  },
+  {
     question: 'Was kostet eine Reinigung bei buttje?',
     answer:
-      'Das hängt von Ihrem Objekt ab, von Größe, Reinigungsintervall und Anforderungen. Wir nennen keine Pauschalpreise von der Stange. Stattdessen vereinbaren wir eine Begehung vor Ort und erstellen danach ein individuelles, unverbindliches Angebot.',
+      'Der Preis richtet sich nach Ihrem Objekt, nach Größe, Reinigungsintervall und Anforderungen. Wir nennen keine Pauschalpreise von der Stange, sondern vereinbaren eine Begehung vor Ort und erstellen danach ein individuelles, unverbindliches Angebot.',
   },
   {
     question: 'Wie schnell ist ein Termin möglich?',
     answer:
-      'Für die erste Begehung melden wir uns kurzfristig. Den genauen Reinigungsbeginn stimmen wir auf Ihren Betrieb ab, viele Kunden starten innerhalb weniger Tage nach dem Angebot.',
+      'Für die erste Begehung melden wir uns kurzfristig, meist innerhalb weniger Tage. Den genauen Reinigungsbeginn stimmen wir auf Ihren Betrieb ab, viele Kunden starten kurz nach dem Angebot.',
   },
   {
     question: 'Arbeitet immer dasselbe Team bei mir?',
     answer:
-      'Ja. buttje arbeitet mit festen Teams und einem festen Ansprechpartner. Kein wechselndes Personal, das jedes Mal neu eingewiesen werden muss. Das ist die Grundlage für Vertrauen und gleichbleibende Qualität.',
-  },
-  {
-    question: 'Sind Sie versichert und konzessioniert?',
-    answer:
-      'Ja. buttje ist ein konzessioniertes Reinigungsgewerbe in Wien, fachlich befugt und geprüft, und betrieblich versichert, inklusive dokumentiertem Schlüsselmanagement.',
+      'Ja. buttje arbeitet mit festen Teams und einem festen Ansprechpartner, ohne wechselndes Personal, das jedes Mal neu eingewiesen werden muss. Das ist die Grundlage für Vertrauen und gleichbleibende Qualität.',
   },
   {
     question: 'In welchen Bezirken sind Sie tätig?',
     answer:
-      'Wir arbeiten in den inneren Bezirken Wiens, vom 1. Bezirk über Landstraße, Wieden, Margareten, Mariahilf, Neubau und Josefstadt bis Alsergrund.',
-  },
-  {
-    question: 'Wie läuft die erste Anfrage ab?',
-    answer:
-      'Sie schildern uns kurz Ihr Objekt, telefonisch, per WhatsApp oder über das Formular. Wir vereinbaren eine Begehung vor Ort und erstellen danach ein unverbindliches Angebot. Erst wenn das passt, geht es los.',
+      'buttje arbeitet in den inneren Bezirken Wiens, vom 1. Bezirk über Landstraße, Wieden, Margareten, Mariahilf, Neubau und Josefstadt bis Alsergrund.',
   },
 ];
 
@@ -159,6 +171,22 @@ export default function Home() {
               </a>
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Trust-Streifen */}
+      <section className="border-y border-gray-100 bg-gray-50" aria-label="Betriebsnachweise">
+        <div className="container-custom py-6">
+          <ul className="grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-4">
+            {trustFacts.map((fact) => (
+              <li key={fact} className="flex items-start gap-2.5 text-sm text-gray-700">
+                <svg className="mt-0.5 h-4 w-4 flex-shrink-0 text-[var(--primary)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>{fact}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 

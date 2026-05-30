@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import ScrollReveal from '../../components/ScrollReveal';
+import CtaBlock from '../../components/CtaBlock';
 import { SITE_URL } from '../../lib/contact';
 
 export const metadata: Metadata = {
@@ -125,8 +126,20 @@ export default function GewerblicheReinigung() {
                 Team und keine wechselnden Gesichter, die jedes Mal neu eingewiesen werden müssen.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
 
-            <h2 className="text-3xl font-bold mt-12 mb-6 text-gray-900">Für wen wir arbeiten</h2>
+      <CtaBlock
+        location="leistung_gewerbliche_reinigung_mitte"
+        heading="Jetzt unverbindlich anfragen"
+        text="Ein kurzer Anruf genügt. Wir vereinbaren eine kostenlose Begehung und erstellen Ihr Angebot."
+      />
+
+      <section className="py-20 bg-white">
+        <div className="container-custom">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold mb-6 text-gray-900">Für wen wir arbeiten</h2>
             <div className="space-y-8">
               {zielgruppen.map((z) => (
                 <div key={z.title}>
