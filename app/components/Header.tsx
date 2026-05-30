@@ -4,8 +4,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import Logo from './Logo';
 import PhoneIcon from './PhoneIcon';
-import { PHONE_MOBILE, PHONE_MOBILE_DISPLAY, telHref } from '../lib/contact';
-import { trackPhoneCall } from '../utils/gtag';
+import { PhoneLink } from './ObfuscatedContact';
 
 const navLinks = [
   { href: '/#leistungen', label: 'Leistungen' },
@@ -39,22 +38,21 @@ export default function Header() {
 
           {/* Dauerhaft sichtbarer Anruf-Button mit sichtbarer Nummer */}
           <div className="flex items-center gap-3">
-            <a
-              href={telHref(PHONE_MOBILE)}
-              onClick={() => trackPhoneCall(PHONE_MOBILE, 'header_number')}
+            <PhoneLink
+              variant="mobile"
+              display
+              location="header_number"
               className="hidden lg:inline-block text-sm font-semibold text-gray-900 hover:text-[var(--primary)] transition-colors"
-            >
-              {PHONE_MOBILE_DISPLAY}
-            </a>
-            <a
-              href={telHref(PHONE_MOBILE)}
-              onClick={() => trackPhoneCall(PHONE_MOBILE, 'header')}
+            />
+            <PhoneLink
+              variant="mobile"
+              location="header"
               className="btn-primary !py-2.5 !px-4 sm:!px-6 text-sm"
             >
               <PhoneIcon className="w-4 h-4" />
               <span className="hidden sm:inline">Jetzt anrufen</span>
               <span className="sm:hidden">Anrufen</span>
-            </a>
+            </PhoneLink>
 
             <button
               onClick={() => setIsOpen(!isOpen)}

@@ -1,8 +1,7 @@
 'use client';
 
 import PhoneIcon from './PhoneIcon';
-import { PHONE_MOBILE, telHref } from '../lib/contact';
-import { trackPhoneCall } from '../utils/gtag';
+import { PhoneLink } from './ObfuscatedContact';
 
 interface CallButtonProps {
   variant?: 'primary' | 'secondary';
@@ -18,13 +17,13 @@ export default function CallButton({
   className = '',
 }: CallButtonProps) {
   return (
-    <a
-      href={telHref(PHONE_MOBILE)}
-      onClick={() => trackPhoneCall(PHONE_MOBILE, location)}
+    <PhoneLink
+      variant="mobile"
+      location={location}
       className={`${variant === 'primary' ? 'btn-primary' : 'btn-secondary'} ${className}`}
     >
       <PhoneIcon className="w-5 h-5" />
       {label}
-    </a>
+    </PhoneLink>
   );
 }

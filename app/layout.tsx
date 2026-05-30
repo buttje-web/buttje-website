@@ -11,7 +11,6 @@ import {
   SITE_URL,
   PHONE_MOBILE,
   PHONE_OFFICE,
-  EMAIL,
   ADDRESS,
   DISTRICTS,
 } from "./lib/contact";
@@ -89,7 +88,6 @@ const jsonLd = {
   url: SITE_URL,
   image: `${SITE_URL}/opengraph-image`,
   telephone: PHONE_OFFICE,
-  email: EMAIL,
   priceRange: "€€€",
   currenciesAccepted: "EUR",
   address: {

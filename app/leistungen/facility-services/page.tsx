@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import ScrollReveal from '../../components/ScrollReveal';
 import CtaBlock from '../../components/CtaBlock';
+import { PhoneLink } from '../../components/ObfuscatedContact';
 import { SITE_URL } from '../../lib/contact';
 
 export const metadata: Metadata = {
@@ -163,8 +164,8 @@ export default function FacilityServices() {
 
           <div className="text-center mt-16">
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+4367762080802" className="btn-primary">Jetzt anfragen (Mobil)</a>
-              <a href="tel:+4312366326442" className="btn-primary">Jetzt anfragen (Büro)</a>
+              <PhoneLink variant="mobile" location="leistung_facility_services" className="btn-primary">Jetzt anfragen (Mobil)</PhoneLink>
+              <PhoneLink variant="office" location="leistung_facility_services" className="btn-primary">Jetzt anfragen (Büro)</PhoneLink>
               <Link href="/#kontakt" className="btn-secondary">Mehr erfahren</Link>
             </div>
           </div>

@@ -2,15 +2,7 @@
 
 import Link from 'next/link';
 import Logo from './Logo';
-import {
-  PHONE_MOBILE,
-  PHONE_MOBILE_DISPLAY,
-  PHONE_OFFICE,
-  PHONE_OFFICE_DISPLAY,
-  EMAIL,
-  telHref,
-} from '../lib/contact';
-import { trackPhoneCall, trackEmailClick } from '../utils/gtag';
+import { PhoneLink, EmailLink } from './ObfuscatedContact';
 import { openConsentSettings } from '../lib/consent';
 
 export default function Footer() {
@@ -40,34 +32,30 @@ export default function Footer() {
               </p>
               <p>
                 <span className="text-[var(--primary)]">Telefon:</span>{' '}
-                <a
-                  href={telHref(PHONE_MOBILE)}
-                  onClick={() => trackPhoneCall(PHONE_MOBILE, 'footer')}
+                <PhoneLink
+                  variant="mobile"
+                  display
+                  location="footer"
                   className="text-[var(--primary)] hover:text-[var(--primary-dark)]"
-                >
-                  {PHONE_MOBILE_DISPLAY}
-                </a>
+                />
                 <span className="text-sm text-gray-500 ml-1">(Mobil)</span>
               </p>
               <p>
                 <span className="text-[var(--primary)]">Büro:</span>{' '}
-                <a
-                  href={telHref(PHONE_OFFICE)}
-                  onClick={() => trackPhoneCall(PHONE_OFFICE, 'footer')}
+                <PhoneLink
+                  variant="office"
+                  display
+                  location="footer"
                   className="text-[var(--primary)] hover:text-[var(--primary-dark)]"
-                >
-                  {PHONE_OFFICE_DISPLAY}
-                </a>
+                />
               </p>
               <p>
                 <span className="text-[var(--primary)]">E-Mail:</span>{' '}
-                <a
-                  href={`mailto:${EMAIL}`}
-                  onClick={() => trackEmailClick(EMAIL, 'footer')}
+                <EmailLink
+                  display
+                  location="footer"
                   className="text-[var(--primary)] hover:text-[var(--primary-dark)]"
-                >
-                  {EMAIL}
-                </a>
+                />
               </p>
             </div>
           </div>

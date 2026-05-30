@@ -8,14 +8,7 @@ import WhatsAppButton from './components/WhatsAppButton';
 import InquiryForm from './components/InquiryForm';
 import GoogleMap from './components/GoogleMap';
 import PhoneIcon from './components/PhoneIcon';
-import {
-  PHONE_MOBILE,
-  PHONE_MOBILE_DISPLAY,
-  PHONE_OFFICE,
-  PHONE_OFFICE_DISPLAY,
-  EMAIL,
-  telHref,
-} from './lib/contact';
+import { PhoneLink, EmailLink, ObfuscatedText } from './components/ObfuscatedContact';
 
 const services = [
   {
@@ -159,9 +152,12 @@ export default function Home() {
             </div>
             <p className="mt-5 text-sm text-gray-700">
               Direkt erreichbar:{' '}
-              <a href={telHref(PHONE_MOBILE)} className="font-semibold text-[var(--primary)] hover:underline">
-                {PHONE_MOBILE_DISPLAY}
-              </a>
+              <PhoneLink
+                variant="mobile"
+                display
+                location="hero"
+                className="font-semibold text-[var(--primary)] hover:underline"
+              />
             </p>
           </div>
         </div>
@@ -286,7 +282,7 @@ export default function Home() {
                 <CallButton location="angebot_section" />
               </div>
               <p className="mt-4 text-sm text-gray-500">
-                {PHONE_MOBILE_DISPLAY} · {EMAIL}
+                <ObfuscatedText kind="mobile" /> · <ObfuscatedText kind="email" />
               </p>
             </div>
             <div>
@@ -334,20 +330,33 @@ export default function Home() {
                 <div>
                   <dt className="text-sm font-semibold uppercase tracking-wider text-gray-500">Telefon</dt>
                   <dd className="mt-1">
-                    <a href={telHref(PHONE_MOBILE)} className="inline-flex items-center gap-2 text-lg font-semibold text-gray-900 hover:text-[var(--primary)]">
+                    <PhoneLink
+                      variant="mobile"
+                      display
+                      location="kontakt_section"
+                      className="inline-flex items-center gap-2 text-lg font-semibold text-gray-900 hover:text-[var(--primary)]"
+                    >
                       <PhoneIcon className="w-5 h-5 text-[var(--primary)]" />
-                      {PHONE_MOBILE_DISPLAY}
-                    </a>
+                    </PhoneLink>
                     <div className="mt-1 text-sm text-gray-500">
                       Büro:{' '}
-                      <a href={telHref(PHONE_OFFICE)} className="hover:text-[var(--primary)]">{PHONE_OFFICE_DISPLAY}</a>
+                      <PhoneLink
+                        variant="office"
+                        display
+                        location="kontakt_section"
+                        className="hover:text-[var(--primary)]"
+                      />
                     </div>
                   </dd>
                 </div>
                 <div>
                   <dt className="text-sm font-semibold uppercase tracking-wider text-gray-500">E-Mail</dt>
                   <dd className="mt-1 text-lg">
-                    <a href={`mailto:${EMAIL}`} className="text-gray-900 hover:text-[var(--primary)]">{EMAIL}</a>
+                    <EmailLink
+                      display
+                      location="kontakt_section"
+                      className="text-gray-900 hover:text-[var(--primary)]"
+                    />
                   </dd>
                 </div>
               </dl>

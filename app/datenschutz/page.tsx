@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { ObfuscatedText } from '../components/ObfuscatedContact';
 
 export const metadata: Metadata = {
   title: 'Datenschutz | buttje',
@@ -18,8 +19,8 @@ export default function DatenschutzPage() {
             buttje e.U.<br />
             Inhaber: Rami Ibraimi<br />
             Graben 28/1/12, 1010 Wien<br />
-            +43 677 62080802<br />
-            info@buttje.at
+            <ObfuscatedText kind="mobile" /><br />
+            <ObfuscatedText kind="email" />
           </p>
 
           <h2>2. Erhebung und Speicherung personenbezogener Daten</h2>
@@ -120,7 +121,7 @@ export default function DatenschutzPage() {
           </ul>
 
           <p>
-            Zur Ausübung dieser Rechte kontaktieren Sie uns unter: info@buttje.at
+            Zur Ausübung dieser Rechte kontaktieren Sie uns unter: <ObfuscatedText kind="email" />
           </p>
 
           <h2>9. Cookies und Einwilligung (Cookie-Banner)</h2>
