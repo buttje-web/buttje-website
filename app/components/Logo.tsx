@@ -4,17 +4,18 @@ interface LogoProps {
   /** 'dark' = schwarzes Logo auf hellem Hintergrund (Standard)
    *  'light' = invertiert via CSS-Filter fuer dunkle/tuerkise Hintergründe */
   variant?: 'dark' | 'light';
+  /** Tailwind-Hoehenklasse, z.B. 'h-14' (Header) oder 'h-9' (Footer) */
   className?: string;
 }
 
-export default function Logo({ variant = 'dark', className = '' }: LogoProps) {
+export default function Logo({ variant = 'dark', className = 'h-9' }: LogoProps) {
   return (
     <Image
       src="/buttje_logo_schwarz.png"
       alt="buttje Gebäudereinigung Wien"
       width={108}
       height={40}
-      className={`h-9 w-auto object-contain${variant === 'light' ? ' brightness-0 invert' : ''}${className ? ` ${className}` : ''}`}
+      className={`w-auto object-contain ${className}${variant === 'light' ? ' brightness-0 invert' : ''}`}
       priority
     />
   );

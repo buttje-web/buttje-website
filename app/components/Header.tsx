@@ -19,9 +19,9 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur shadow-sm">
       <nav className="container-custom">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
           <Link href="/" aria-label="buttje, Startseite" onClick={() => setIsOpen(false)}>
-            <Logo />
+            <Logo className="h-14" />
           </Link>
 
           {/* Desktop Navigation */}
