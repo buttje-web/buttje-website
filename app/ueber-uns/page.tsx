@@ -66,6 +66,25 @@ export default function UeberUnsPage() {
             </div>
 
             <div>
+              <h2 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">Erfahrung, die man nicht kaufen kann</h2>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                buttje wird von einem Inhaber mit über 20 Jahren Erfahrung in der Gebäudereinigung geführt,
+                ein großer Teil davon in leitender Verantwortung. Die Berechtigung, dieses reglementierte
+                Gewerbe selbständig auszuüben, wurde behördlich auf Grundlage dieser langjährigen Praxis
+                festgestellt.
+              </p>
+              <p className="mt-4 text-lg text-gray-700 leading-relaxed">
+                Dazu kommt eine abgeschlossene Ausbildung als Raumausstatter, also ein geschultes Auge für
+                Räume, Materialien und Oberflächen. Sauberkeit ist bei buttje deshalb nicht nur Hygiene,
+                sondern Teil des Gesamteindrucks eines Raums.
+              </p>
+              <p className="mt-4 text-lg text-gray-700 leading-relaxed">
+                Der Inhaber steht selbst hinter der Arbeit und ist Ihr fester Ansprechpartner. Das ist die
+                Grundlage für Verlässlichkeit, die man nicht improvisieren kann.
+              </p>
+            </div>
+
+            <div>
               <h2 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">Diskretion als Selbstverständnis</h2>
               <p className="text-lg text-gray-700 leading-relaxed">
                 Wir arbeiten dort, wo Vertrauen zählt: in Kanzleien, Ordinationen und Unternehmen mit
