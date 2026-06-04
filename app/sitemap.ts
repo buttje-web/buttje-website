@@ -11,9 +11,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/leistungen/gewerbliche-reinigung', priority: 0.9, changeFrequency: 'monthly' },
     { path: '/leistungen/umzuege-und-endreinigungen', priority: 0.9, changeFrequency: 'monthly' },
     { path: '/leistungen/facility-services', priority: 0.9, changeFrequency: 'monthly' },
-    { path: '/impressum', priority: 0.3, changeFrequency: 'yearly' },
-    { path: '/agb', priority: 0.3, changeFrequency: 'yearly' },
-    { path: '/datenschutz', priority: 0.3, changeFrequency: 'yearly' },
   ];
 
   return routes.map(({ path, priority, changeFrequency }) => ({
