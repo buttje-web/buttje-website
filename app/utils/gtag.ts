@@ -20,7 +20,7 @@ export const trackPhoneCall = (phoneNumber: string, location: string) => {
     
     // Google Ads conversion tracking
     window.gtag('event', 'conversion', {
-      send_to: 'AW-17533089249/phone_call',
+      send_to: 'AW-17533089249/FMlvCKCkx7kcEOHrtqhB',
       value: 1.0,
       currency: 'EUR'
     });
@@ -41,7 +41,7 @@ export const trackEmailClick = (email: string, location: string) => {
     
     // Google Ads conversion tracking
     window.gtag('event', 'conversion', {
-      send_to: 'AW-17533089249/email_click',
+      send_to: 'AW-17533089249/iFX9CKOkx7kcEOHrtqhB',
       value: 1.0,
       currency: 'EUR'
     });
@@ -61,20 +61,20 @@ export const trackServicePageVisit = (serviceName: string) => {
   }
 };
 
-// Track contact form interactions (if you add forms later)
-export const trackContactFormSubmit = (formType: string) => {
+// Track WhatsApp click conversions
+export const trackWhatsAppClick = (location: string) => {
   if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('event', 'form_submit', {
-      event_category: 'conversion',
-      event_label: formType,
+    window.gtag('event', 'whatsapp_click', {
+      event_category: 'engagement',
+      event_label: 'whatsapp',
       custom_parameters: {
-        form_type: formType
+        location: location
       }
     });
-    
+
     // Google Ads conversion tracking
     window.gtag('event', 'conversion', {
-      send_to: 'AW-17533089249/form_submit',
+      send_to: 'AW-17533089249/sue_CKakx7kcEOHrtqhB',
       value: 1.0,
       currency: 'EUR'
     });
