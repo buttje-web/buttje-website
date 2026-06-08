@@ -7,9 +7,9 @@ import { PhoneLink } from '../../components/ObfuscatedContact';
 import { SITE_URL } from '../../lib/contact';
 
 export const metadata: Metadata = {
-  title: 'Büroreinigung & Gewerbereinigung Wien | buttje',
+  title: 'Reinigungsfirma & Büroreinigung Wien | buttje',
   description:
-    'Büroreinigung, Kanzleireinigung und Praxisreinigung in Wien. Feste Teams, diskret, zuverlässig. Unverbindliche Anfrage und Begehung vor Ort.',
+    'Reinigungsfirma in Wien: buttje übernimmt Gebäudereinigung, Büroreinigung, Kanzlei- und Praxisreinigung in den inneren Bezirken. Feste Teams, diskret, zuverlässig. Unverbindliche Begehung vor Ort.',
   alternates: { canonical: '/leistungen/gewerbliche-reinigung' },
   openGraph: {
     title: 'Büroreinigung & Gewerbereinigung Wien | buttje',
@@ -90,7 +90,7 @@ export default function GewerblicheReinigung() {
         <div className="absolute inset-0 flex items-end justify-center">
           <div className="container-custom pb-16">
             <div className="max-w-3xl mx-auto text-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Gewerbliche Reinigung</h1>
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Gebäudereinigung in Wien für Unternehmen</h1>
               <p className="text-xl md:text-2xl text-gray-200 font-light">
                 Perfekte Sauberkeit für Unternehmen, Kanzleien & gehobene Geschäftsräume
               </p>
@@ -103,6 +103,10 @@ export default function GewerblicheReinigung() {
         <div className="container-custom">
           <div className="max-w-3xl mx-auto">
             <p className="text-xl text-gray-700 leading-relaxed">
+              Als Reinigungsfirma in Wien übernimmt buttje die Gebäudereinigung für Unternehmen in den inneren
+              Bezirken, von Kanzleien über Ordinationen bis zu Premium-Büros.
+            </p>
+            <p className="mt-4 text-xl text-gray-700 leading-relaxed">
               Ein sauberes Arbeitsumfeld sorgt für einen professionellen Eindruck und steigert das Wohlbefinden
               Ihrer Mitarbeiter. buttje reinigt Büros, Kanzleien, Ordinationen und gehobene Geschäftsräume in den
               inneren Bezirken Wiens, zuverlässig, diskret und mit festen Teams.
