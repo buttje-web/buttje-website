@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: 'Über uns | buttje Gebäudereinigung Wien',
     description:
       'buttje steht für Qualität ohne Mittelmaß. Diskrete Gebäudereinigung mit festen Teams für Kanzleien, Praxen und Büros in Wien.',
-    url: 'https://buttje.at/ueber-uns',
+    url: 'https://www.buttje.at/ueber-uns',
     type: 'website',
   },
 };
