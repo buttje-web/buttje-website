@@ -8,7 +8,7 @@ export default function Home() {
         alignItems: 'center',
         justifyContent: 'center',
         background: '#faf8f4',
-        fontFamily: '"Inter", -apple-system, BlinkMacSystemFont, sans-serif',
+        fontFamily: 'var(--font-inter), sans-serif',
         margin: 0,
         padding: 0,
       }}
