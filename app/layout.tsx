@@ -11,6 +11,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'buttje',
   robots: { index: false, follow: false },
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+  },
 };
 
 export default function RootLayout({
