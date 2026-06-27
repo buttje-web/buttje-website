@@ -17,7 +17,7 @@ export default function Home() {
         style={{
           color: '#1a1714',
           fontSize: 'clamp(44px, 11vw, 150px)',
-          fontWeight: 300,
+          fontWeight: 400,
           letterSpacing: '0.02em',
           userSelect: 'none',
           lineHeight: 1,
