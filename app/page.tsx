@@ -1,4 +1,11 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
+
+// Self-canonical auf die eigene Startseite (Host aus metadataBase im Layout).
+// robots (noindex) bleibt aus dem Layout geerbt — Platzhalter "launching soon".
+export const metadata: Metadata = {
+  alternates: { canonical: '/' },
+};
 
 export default function Home() {
   return (

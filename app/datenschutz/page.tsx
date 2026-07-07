@@ -4,6 +4,7 @@ import { ObfuscatedText } from '../components/ObfuscatedContact';
 export const metadata: Metadata = {
   title: 'Datenschutz | buttje',
   robots: { index: false },
+  alternates: { canonical: '/datenschutz' },
 };
 
 export default function DatenschutzPage() {

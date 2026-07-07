@@ -9,6 +9,11 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  // Kanonischer Host (Apex leitet per 308 auf www weiter). Sorgt dafür, dass
+  // relative canonical-/OG-URLs gegen buttje.at aufloesen statt gegen die
+  // Vercel-Preview-Domain. Canonical wird pro Seite gesetzt (nicht hier),
+  // damit Unterseiten nicht faelschlich auf "/" zeigen.
+  metadataBase: new URL('https://www.buttje.at'),
   title: 'buttje',
   robots: { index: false, follow: false },
   icons: {

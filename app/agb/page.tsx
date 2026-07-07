@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'AGB | buttje',
   robots: { index: false },
+  alternates: { canonical: '/agb' },
 };
 
 export default function AGBPage() {

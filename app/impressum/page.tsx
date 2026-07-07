@@ -4,6 +4,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Impressum | buttje',
   robots: { index: true, follow: false },
+  alternates: { canonical: '/impressum' },
 };
 
 const s = {
